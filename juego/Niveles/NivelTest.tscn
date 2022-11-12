@@ -655,9 +655,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.2, 25 )
 [node name="ColumnaBloques50" parent="Bordes/Este" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.2, 25 )
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2, 0, 0 )
-
 [node name="Plataformas" type="Spatial" parent="."]
 
 [node name="BloqueLargo" parent="Plataformas" instance=ExtResource( 3 )]
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2, 0, 0 )
