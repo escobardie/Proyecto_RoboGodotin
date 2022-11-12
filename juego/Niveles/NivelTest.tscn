@@ -16,9 +16,6 @@ extents = Vector3( 25, 0.001, 25 )
 
 [node name="NivelTest" type="Node"]
 
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.868649, 0.495428, 0, -0.495428, 0.868649, 0, 4.02458, 5.00042 )
-
 [node name="Suelo" type="StaticBody" parent="."]
 
 [node name="MeshInstance" type="MeshInstance" parent="Suelo"]
