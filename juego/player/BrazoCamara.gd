@@ -21,7 +21,8 @@ func _unhandled_input(evento: InputEvent) -> void:
 	c += 1
 	if evento is InputEventMouseMotion:
 		#MOVIMIENTO ALREDEDOR DE X (ARRIBA / ABAJO)
-		rotation_degrees.x += evento.relative.y * velocidad_mov_camara
+		#esta en negativo para mover al sentido que me favorece
+		rotation_degrees.x -= evento.relative.y * velocidad_mov_camara
 		rotation_degrees.x = clamp(
 			rotation_degrees.x,
 			rango_rotacion_camara_x.x,
@@ -29,7 +30,8 @@ func _unhandled_input(evento: InputEvent) -> void:
 		)
 		
 		#MOVIMIENTO ALREDEDOR DE Y (DERECHA / INZQUIERDA)
-		rotation_degrees.y += evento.relative.x * velocidad_mov_camara
+		#esta en negativo para mover al sentido que me favorece
+		rotation_degrees.y -= evento.relative.x * velocidad_mov_camara
 		rotation_degrees.y = wrapf(
 			rotation_degrees.y,
 			rango_rotacion_camara_y.x,

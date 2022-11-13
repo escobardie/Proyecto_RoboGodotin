@@ -16,6 +16,7 @@ onready var brazo_camara:SpringArm = $BrazoCamara
 
 ## ATRIBUTOS
 var movimiento: Vector3 = Vector3.ZERO
+var vector_snap:Vector3 = Vector3.DOWN
 var salto_interrumpido: bool = false
 var saltando:bool = false
 
@@ -25,12 +26,14 @@ var saltando:bool = false
 func _ready() -> void:
 	pass # Replace with function body.
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	brazo_camara.translation = translation
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
+	movimiento_horizontal()
 	movimiento_vertical()
-	movimiento = move_and_slide(movimiento, direccion_arriba)
+	movimiento = move_and_slide_with_snap(movimiento, vector_snap, direccion_arriba, true)
+	#movimiento = move_and_slide(movimiento, direccion_arriba)
 
 
 
@@ -49,12 +52,20 @@ func movimiento_vertical() -> void:
 		#al ya no estar tocando el suelo..
 		saltando = false
 	
+	var tocar_suelo:bool = is_on_floor() and vector_snap == Vector3.ZERO
 	#cuando estoy en el suelo y presiono la tecla de saltar en el primer instante
 	var inicio_salto:bool = is_on_floor() and Input.is_action_just_pressed("saltar")
+
 	
 	if inicio_salto:
+		#“Mientras el vector snap esté en contacto con el suelo,
+		#el cuerpo permanecerá unido a la superficie
+		vector_snap = Vector3.ZERO
 		saltando = true
 		salto_interrumpido = false
+	elif tocar_suelo:
+		vector_snap = Vector3.DOWN
+		#pass
 	
 	if movimiento.y >= velocidad_max.y:
 		salto_interrumpido = true
@@ -64,5 +75,22 @@ func movimiento_vertical() -> void:
 	#movimiento en Y el valor de la fuerza_salto
 	if Input.is_action_pressed("saltar") and saltando and not salto_interrumpido:
 		movimiento.y += fuerza_salto
-		
+
+func movimiento_horizontal() -> void:
+	movimiento.x = tomar_direccion().x * velocidad_max.x
+	movimiento.z = tomar_direccion().z * velocidad_max.x
+
+func tomar_direccion() -> Vector3:
+	var direccion: Vector3 = Vector3.ZERO
+	direccion.x = Input.get_action_strength("mov_der") - Input.get_action_strength("mov_izq")
+	direccion.z = Input.get_action_strength("mov_atras") - Input.get_action_strength("mov_adelante")
+	
+	#con esto asignamos el movimiento de la camaras con factor para mover al personaje
+	direccion = direccion.rotated(Vector3.UP, brazo_camara.rotation.y).normalized()
+	
+	return direccion
+
+
+
+
 
