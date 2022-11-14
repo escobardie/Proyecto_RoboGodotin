@@ -11,8 +11,10 @@ export var gravedad:float = 9.8
 export var impulso:float = 50.0
 export var fuerza_salto:float = 18.0
 
+
 ## ATRIBUTOS ONREDY
 onready var brazo_camara:SpringArm = $BrazoCamara
+onready var armadura:Spatial = $Armadura
 
 ## ATRIBUTOS
 var movimiento: Vector3 = Vector3.ZERO
@@ -33,7 +35,11 @@ func _physics_process(_delta: float) -> void:
 	movimiento_horizontal()
 	movimiento_vertical()
 	movimiento = move_and_slide_with_snap(movimiento, vector_snap, direccion_arriba, true)
-	#movimiento = move_and_slide(movimiento, direccion_arriba)
+	
+	#generamos la direccion/orientacion del personaje, con respecto al movimiento
+	var direccion_vista_player = Vector2(movimiento.z, movimiento.x)
+	if direccion_vista_player.length() > 0:
+		armadura.rotation.y = direccion_vista_player.angle()
 
 
 
