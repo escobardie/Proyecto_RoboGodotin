@@ -1651,7 +1651,7 @@ nodes/state/node = SubResource( 21 )
 nodes/state/position = Vector2( 440, 0 )
 nodes/walk/node = SubResource( 22 )
 nodes/walk/position = Vector2( -40, -240 )
-node_connections = [ "scale", 0, "walk", "state", 0, "scale", "state", 1, "air_dir", "output", 0, "gun", "walk", 0, "Animation", "walk", 1, "Animation 2", "gun", 0, "state", "gun", 1, "Animation 5", "air_dir", 0, "Animation 3", "air_dir", 1, "Animation 4" ]
+node_connections = [ "scale", 0, "walk", "state", 0, "scale", "state", 1, "air_dir", "output", 0, "gun", "gun", 0, "state", "gun", 1, "Animation 5", "air_dir", 0, "Animation 3", "air_dir", 1, "Animation 4", "walk", 0, "Animation", "walk", 1, "Animation 2" ]
 
 [sub_resource type="AnimationNodeAnimation" id=25]
 animation = "run-cycle"
@@ -1710,7 +1710,7 @@ nodes/TimeScale/position = Vector2( 773.333, 160 )
 nodes/TransicionSueloAire/node = SubResource( 33 )
 nodes/TransicionSueloAire/position = Vector2( 1440, 133.333 )
 nodes/output/position = Vector2( 2000, 26.6667 )
-node_connections = [ "output", 0, "MezclaDisparar", "TimeScale", 0, "Animation 2", "MezclaIdleCaminar", 0, "Animation", "MezclaIdleCaminar", 1, "TimeScale", "TransicionSueloAire", 0, "MezclaIdleCaminar", "TransicionSueloAire", 1, "MezclaSaltarCaer", "MezclaDisparar", 0, "TransicionSueloAire", "MezclaDisparar", 1, "Animation 5", "MezclaSaltarCaer", 0, "Animation 3", "MezclaSaltarCaer", 1, "Animation 4" ]
+node_connections = [ "output", 0, "MezclaDisparar", "MezclaDisparar", 0, "TransicionSueloAire", "MezclaDisparar", 1, "Animation 5", "MezclaIdleCaminar", 0, "Animation", "MezclaIdleCaminar", 1, "TimeScale", "MezclaSaltarCaer", 0, "Animation 3", "MezclaSaltarCaer", 1, "Animation 4", "TimeScale", 0, "Animation 2", "TransicionSueloAire", 0, "MezclaIdleCaminar", "TransicionSueloAire", 1, "MezclaSaltarCaer" ]
 
 [node name="Godotin" type="KinematicBody"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/MotorSawOnStdOff PE084201.mp3-47b197a219d0a18037433d82ae7fbf12.mp3str"
+
+[deps]
+
+source_file="res://juego/Objetos/danio/recursos/MotorSawOnStdOff PE084201.mp3"
+dest_files=[ "res://.import/MotorSawOnStdOff PE084201.mp3-47b197a219d0a18037433d82ae7fbf12.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

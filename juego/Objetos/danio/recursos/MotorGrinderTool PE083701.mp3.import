@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/MotorGrinderTool PE083701.mp3-2cae58b6604f659a803da5aaf018a3bf.mp3str"
+
+[deps]
+
+source_file="res://juego/Objetos/danio/recursos/MotorGrinderTool PE083701.mp3"
+dest_files=[ "res://.import/MotorGrinderTool PE083701.mp3-2cae58b6604f659a803da5aaf018a3bf.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

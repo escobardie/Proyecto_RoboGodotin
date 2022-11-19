@@ -18,10 +18,16 @@ _global_script_classes=[ {
 "class": "Godotin",
 "language": "GDScript",
 "path": "res://juego/player/Godotin.gd"
+}, {
+"base": "Area",
+"class": "Moneda",
+"language": "GDScript",
+"path": "res://juego/Items/MonedaDorada.gd"
 } ]
 _global_script_class_icons={
 "ArbolAnimacionPlayer": "",
-"Godotin": ""
+"Godotin": "",
+"Moneda": ""
 }
 
 [application]
