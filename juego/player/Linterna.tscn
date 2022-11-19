@@ -1,0 +1,8 @@
+[gd_scene format=2]
+
+[node name="Linterna" type="SpotLight"]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.465, 1.268, 0.356 )
+light_color = Color( 0.964706, 0.996078, 0.0196078, 1 )
+light_energy = 0.0
+spot_range = 7.205
+spot_angle = 12.09
