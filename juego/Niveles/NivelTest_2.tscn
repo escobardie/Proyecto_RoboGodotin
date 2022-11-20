@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://juego/Bloques/ColumnaBloques.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/player/Player.tscn" type="PackedScene" id=2]
@@ -9,10 +9,9 @@
 [ext_resource path="res://juego/Objetos/danio/Sierra.tscn" type="PackedScene" id=7]
 [ext_resource path="res://juego/interfaz/HUD.tscn" type="PackedScene" id=8]
 [ext_resource path="res://juego/Niveles/Nivel.gd" type="Script" id=9]
-[ext_resource path="res://juego/Niveles/Portal.tscn" type="PackedScene" id=10]
 
 [sub_resource type="SpatialMaterial" id=1]
-albedo_color = Color( 0.0862745, 0.262745, 0.25098, 1 )
+albedo_color = Color( 0.0823529, 0.780392, 1, 1 )
 
 [sub_resource type="PlaneMesh" id=2]
 material = SubResource( 1 )
@@ -23,10 +22,8 @@ extents = Vector3( 25, 0.001, 25 )
 
 [node name="NivelTest" type="Node"]
 script = ExtResource( 9 )
-numero_nivel = 1
-proximo_nivel = "res://juego/Niveles/NivelTest_2.tscn"
-
-[node name="HUD" parent="." instance=ExtResource( 8 )]
+numero_nivel = 2
+proximo_nivel = "res://juego/interfaz/MenuIntermedio.tscn"
 
 [node name="Suelo" type="StaticBody" parent="."]
 
@@ -699,5 +696,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.23002, 0.568935, 0 )
 [node name="Sierra" parent="ContenedorObjetos" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.65719, 0.659492, 0 )
 
-[node name="Portal" parent="." instance=ExtResource( 10 )]
-transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 1.86961, 0, 5.55161 )
+[node name="HUD" parent="." instance=ExtResource( 8 )]

@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://juego/interfaz/Kenney Future.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://juego/interfaz/coin_gold.png" type="Texture" id=2]
+[ext_resource path="res://juego/interfaz/bg_layer1.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "default"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MarginContainer/Sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.754, 0.754 ), Vector2( 0.8, 0.8 ), Vector2( 0.55, 0.55 ), Vector2( 0.39, 0.39 ), Vector2( 0.754, 0.754 ) ]
+}
+
+[node name="ContenedorMonedas" type="NinePatchRect"]
+self_modulate = Color( 0.0156863, 0.0352941, 0.215686, 0.34902 )
+margin_left = 1.0
+margin_right = 128.0
+margin_bottom = 32.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Cantidad" type="Label" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 15.0
+margin_top = -17.5
+margin_right = 79.0
+margin_bottom = 17.5
+custom_fonts/font = SubResource( 1 )
+text = "100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -47.0
+margin_top = -24.0
+margin_bottom = 24.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="MarginContainer"]
+position = Vector2( 23, 24 )
+scale = Vector2( 0.754, 0.754 )
+texture = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "default"
+anims/default = SubResource( 2 )

@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://JUEGO/interfaz/ContenedorVidas.tscn" type="PackedScene" id=2]
+[ext_resource path="res://JUEGO/interfaz/ContenedorMonedasOro.tscn" type="PackedScene" id=5]
+[ext_resource path="res://JUEGO/interfaz/HUD.gd" type="Script" id=6]
+[ext_resource path="res://JUEGO/interfaz/ContenedorNombre.tscn" type="PackedScene" id=7]
+
+[node name="HUD" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 160.0, 31.6872 ],
+"_edit_use_anchors_": false,
+"_edit_vertical_guides_": [ 640.0 ]
+}
+
+[node name="ContenedorVidas" parent="." instance=ExtResource( 2 )]
+margin_left = 32.0
+margin_top = 40.0
+margin_right = 177.0
+margin_bottom = 91.0
+
+[node name="ContenedorMonedasOro" parent="." instance=ExtResource( 5 )]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -152.0
+margin_top = 32.0
+margin_right = -25.0
+margin_bottom = 64.0
+
+[node name="ContenedorNombre" parent="." instance=ExtResource( 7 )]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -116.0
+margin_top = 32.0
+margin_right = 116.0
+margin_bottom = 80.0

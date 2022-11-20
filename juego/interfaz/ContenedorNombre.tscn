@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://JUEGO/interfaz/ContenedorInfo.tscn" type="PackedScene" id=1]
+
+[node name="ContenedorNombre" instance=ExtResource( 1 )]
+margin_left = 0.0
+margin_right = 232.0
+margin_bottom = 48.0
+
+[node name="TextureRect" parent="." index="0"]
+texture = null
+
+[node name="Cantidad" parent="." index="1"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -106.5
+margin_top = -20.5
+margin_right = 106.5
+margin_bottom = 20.5
+text = "nivel: 99"
