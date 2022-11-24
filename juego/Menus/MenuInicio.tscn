@@ -19,6 +19,7 @@ __meta__ = {
 }
 menu_ajustes = "res://juego/Menus/MenuAjustes.tscn"
 nivel_inicial = "res://juego/Niveles/NivelTest.tscn"
+pantalla_carga = "res://juego/Menus/PantallaCarga.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0

@@ -46,12 +46,14 @@ _global_script_class_icons={
 
 config/name="RoboGodotin"
 run/main_scene="res://juego/Niveles/NivelTest.tscn"
-config/icon="res://icon.png"
+config/icon="res://logo_3.png"
 
 [autoload]
 
 Eventos="*res://juego/autoloads/Eventos.gd"
 DatosJuego="*res://juego/autoloads/DatosJuego.gd"
+DatosConfiguracion="*res://juego/autoloads/DatosConfiguracion.gd"
+CargaSegundoPlano="*res://juego/autoloads/CargaSegundoPlano.tscn"
 
 [display]
 
