@@ -4,11 +4,15 @@ extends Control
 
 ## ATRIBUTOS EXPORT
 export(String, FILE, "*.tscn") var menu_ajustes = ""
+export(String, FILE, "*.tscn") var nivel_inicial = "" 
 
 ## METODOS
 func _get_configuration_warning() -> String:
 	if menu_ajustes == "":
-		return "CHEQUEAR RUTAS"
+		return "CHEQUEAR RUTAS MENU AJUSTES"
+	
+	if nivel_inicial == "":
+		return "CHEQUEAR RUTAS NIVEL INICIAL"
 	
 	return ""
 
@@ -20,3 +24,7 @@ func _on_BotonOpciones_pressed() -> void:
 
 func _on_BotonSalir_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_BotonNuevo_pressed() -> void:
+	get_tree().change_scene(nivel_inicial)

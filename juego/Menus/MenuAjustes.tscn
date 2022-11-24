@@ -1,14 +1,22 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=31 format=2]
 
-[ext_resource path="res://juego/interfaz/Kenney Future.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://juego/Menus/MenuAjustes.gd" type="Script" id=2]
 [ext_resource path="res://juego/Menus/BotonSFX.wav" type="AudioStream" id=3]
 [ext_resource path="res://juego/Menus/CambiaVolumen.gd" type="Script" id=4]
 [ext_resource path="res://juego/Menus/guerra-de-las-galaxias-starwras-musica-.mp3" type="AudioStream" id=5]
+[ext_resource path="res://juego/Menus/Revamped.otf" type="DynamicFontData" id=6]
+[ext_resource path="res://juego/Menus/Contenedores/ContenedorAccion.tscn" type="PackedScene" id=7]
+
+[sub_resource type="DynamicFont" id=26]
+size = 20
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFontData" id=28]
+font_path = "res://juego/Menus/Revamped.otf"
 
 [sub_resource type="DynamicFont" id=1]
-size = 37
-font_data = ExtResource( 1 )
+size = 35
+font_data = SubResource( 28 )
 
 [sub_resource type="DynamicFontData" id=2]
 font_path = "res://juego/Menus/Revamped.otf"
@@ -70,6 +78,10 @@ font_path = "res://juego/Menus/Revamped.otf"
 [sub_resource type="DynamicFont" id=23]
 font_data = SubResource( 22 )
 
+[sub_resource type="DynamicFont" id=27]
+size = 25
+font_data = ExtResource( 6 )
+
 [sub_resource type="DynamicFontData" id=24]
 font_path = "res://juego/interfaz/Kenney Future.ttf"
 
@@ -82,7 +94,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
 __meta__ = {
-"_edit_horizontal_guides_": [ 64.0, 576.0 ],
+"_edit_horizontal_guides_": [ 64.0, 576.0, 167.0 ],
 "_edit_use_anchors_": false,
 "_edit_vertical_guides_": [ 128.0, 832.0, 480.0 ]
 }
@@ -93,33 +105,59 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 1 )
 
-[node name="Titulo" type="Label" parent="."]
+[node name="BotonSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+bus = "SFX"
+
+[node name="Musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+bus = "Musica"
+
+[node name="ContenedorTabulador" type="TabContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 26 )
+tab_align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioVideo" type="Tabs" parent="ContenedorTabulador"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 40.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="PanelPrincipal" type="Panel" parent="ContenedorTabulador/AudioVideo"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -352.0
+margin_top = -232.0
+margin_right = 352.0
+margin_bottom = 232.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Titulo" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -106.0
-margin_top = 21.0
+margin_top = 25.0
 margin_right = 106.0
-margin_bottom = 64.0
+margin_bottom = 43.0
 custom_fonts/font = SubResource( 1 )
 text = "AJUSTES"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PanelPrincipal" type="Panel" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -352.0
-margin_top = -256.0
-margin_right = 352.0
-margin_bottom = 256.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelPrincipal"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ContenedorTabulador/AudioVideo/PanelPrincipal"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -133,7 +171,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Pantalla" type="Label" parent="PanelPrincipal/VBoxContainer"]
+[node name="Pantalla" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer"]
 margin_top = 60.0
 margin_right = 400.0
 margin_bottom = 113.0
@@ -141,37 +179,37 @@ custom_fonts/font = SubResource( 3 )
 text = "PANTALLA"
 align = 1
 
-[node name="HSeparator" type="HSeparator" parent="PanelPrincipal/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer"]
 margin_top = 117.0
 margin_right = 400.0
 margin_bottom = 121.0
 
-[node name="Resolucion" type="HBoxContainer" parent="PanelPrincipal/VBoxContainer"]
+[node name="Resolucion" type="HBoxContainer" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer"]
 margin_top = 125.0
 margin_right = 400.0
 margin_bottom = 153.0
 alignment = 1
 
-[node name="TextoResolucion" type="Label" parent="PanelPrincipal/VBoxContainer/Resolucion"]
+[node name="TextoResolucion" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/Resolucion"]
 margin_left = 18.0
 margin_right = 211.0
 margin_bottom = 27.0
 custom_fonts/font = SubResource( 5 )
 text = "RESOLUCION"
 
-[node name="OpcionResolucion" type="OptionButton" parent="PanelPrincipal/VBoxContainer/Resolucion"]
+[node name="OpcionResolucion" type="OptionButton" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/Resolucion"]
 margin_left = 215.0
 margin_right = 381.0
 margin_bottom = 28.0
 custom_fonts/font = SubResource( 17 )
 text = "1920x1080"
 
-[node name="HSeparator3" type="HSeparator" parent="PanelPrincipal/VBoxContainer"]
+[node name="HSeparator3" type="HSeparator" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer"]
 margin_top = 157.0
 margin_right = 400.0
 margin_bottom = 161.0
 
-[node name="PantallaCompleta" type="CheckBox" parent="PanelPrincipal/VBoxContainer"]
+[node name="PantallaCompleta" type="CheckBox" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer"]
 margin_top = 165.0
 margin_right = 400.0
 margin_bottom = 200.0
@@ -179,14 +217,14 @@ custom_fonts/font = SubResource( 7 )
 text = "PANTALLA COMPLETA"
 align = 1
 script = ExtResource( 4 )
-nodo_sfx = NodePath("../../../BotonSFX")
+nodo_sfx = NodePath("../../../../../BotonSFX")
 
-[node name="HSeparator2" type="HSeparator" parent="PanelPrincipal/VBoxContainer"]
+[node name="HSeparator2" type="HSeparator" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer"]
 margin_top = 204.0
 margin_right = 400.0
 margin_bottom = 208.0
 
-[node name="Volumen" type="Label" parent="PanelPrincipal/VBoxContainer"]
+[node name="Volumen" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer"]
 margin_top = 212.0
 margin_right = 400.0
 margin_bottom = 239.0
@@ -194,34 +232,34 @@ custom_fonts/font = SubResource( 9 )
 text = "VOLUMEN"
 align = 1
 
-[node name="HSeparator4" type="HSeparator" parent="PanelPrincipal/VBoxContainer"]
+[node name="HSeparator4" type="HSeparator" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer"]
 margin_top = 243.0
 margin_right = 400.0
 margin_bottom = 247.0
 
-[node name="VolumenGeneral" type="HBoxContainer" parent="PanelPrincipal/VBoxContainer"]
+[node name="VolumenGeneral" type="HBoxContainer" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer"]
 margin_top = 251.0
 margin_right = 400.0
 margin_bottom = 278.0
 alignment = 1
 
-[node name="TextoVolumen" type="Label" parent="PanelPrincipal/VBoxContainer/VolumenGeneral"]
+[node name="TextoVolumen" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenGeneral"]
 margin_left = 86.0
 margin_right = 229.0
 margin_bottom = 27.0
 custom_fonts/font = SubResource( 11 )
 text = "GENERAL"
 
-[node name="BajarVolum" type="Button" parent="PanelPrincipal/VBoxContainer/VolumenGeneral"]
+[node name="BajarVolum" type="Button" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenGeneral"]
 margin_left = 233.0
 margin_right = 253.0
 margin_bottom = 27.0
 custom_fonts/font = SubResource( 19 )
 text = "-"
 script = ExtResource( 4 )
-nodo_sfx = NodePath("../../../../BotonSFX")
+nodo_sfx = NodePath("../../../../../../BotonSFX")
 
-[node name="NivelVolumen" type="Label" parent="PanelPrincipal/VBoxContainer/VolumenGeneral"]
+[node name="NivelVolumen" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenGeneral"]
 margin_left = 257.0
 margin_top = 4.0
 margin_right = 290.0
@@ -229,7 +267,7 @@ margin_bottom = 22.0
 custom_fonts/font = SubResource( 21 )
 text = "100"
 
-[node name="SubirVolum" type="Button" parent="PanelPrincipal/VBoxContainer/VolumenGeneral"]
+[node name="SubirVolum" type="Button" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenGeneral"]
 margin_left = 294.0
 margin_right = 314.0
 margin_bottom = 27.0
@@ -239,31 +277,31 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-nodo_sfx = NodePath("../../../../BotonSFX")
+nodo_sfx = NodePath("../../../../../../BotonSFX")
 
-[node name="VolumenMusica" type="HBoxContainer" parent="PanelPrincipal/VBoxContainer"]
+[node name="VolumenMusica" type="HBoxContainer" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer"]
 margin_top = 282.0
 margin_right = 400.0
 margin_bottom = 309.0
 alignment = 1
 
-[node name="TextoVolumen" type="Label" parent="PanelPrincipal/VBoxContainer/VolumenMusica"]
+[node name="TextoVolumen" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenMusica"]
 margin_left = 101.0
 margin_right = 214.0
 margin_bottom = 27.0
 custom_fonts/font = SubResource( 11 )
 text = "MUSICA"
 
-[node name="BajarVolum" type="Button" parent="PanelPrincipal/VBoxContainer/VolumenMusica"]
+[node name="BajarVolum" type="Button" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenMusica"]
 margin_left = 218.0
 margin_right = 238.0
 margin_bottom = 27.0
 custom_fonts/font = SubResource( 19 )
 text = "-"
 script = ExtResource( 4 )
-nodo_sfx = NodePath("../../../../BotonSFX")
+nodo_sfx = NodePath("../../../../../../BotonSFX")
 
-[node name="NivelVolumen" type="Label" parent="PanelPrincipal/VBoxContainer/VolumenMusica"]
+[node name="NivelVolumen" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenMusica"]
 margin_left = 242.0
 margin_top = 4.0
 margin_right = 275.0
@@ -271,7 +309,7 @@ margin_bottom = 22.0
 custom_fonts/font = SubResource( 21 )
 text = "100"
 
-[node name="SubirVolum" type="Button" parent="PanelPrincipal/VBoxContainer/VolumenMusica"]
+[node name="SubirVolum" type="Button" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenMusica"]
 margin_left = 279.0
 margin_right = 299.0
 margin_bottom = 27.0
@@ -281,31 +319,31 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-nodo_sfx = NodePath("../../../../BotonSFX")
+nodo_sfx = NodePath("../../../../../../BotonSFX")
 
-[node name="VolumenSFX" type="HBoxContainer" parent="PanelPrincipal/VBoxContainer"]
+[node name="VolumenSFX" type="HBoxContainer" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer"]
 margin_top = 313.0
 margin_right = 400.0
 margin_bottom = 340.0
 alignment = 1
 
-[node name="TextoVolumen" type="Label" parent="PanelPrincipal/VBoxContainer/VolumenSFX"]
+[node name="TextoVolumen" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenSFX"]
 margin_left = 127.0
 margin_right = 188.0
 margin_bottom = 27.0
 custom_fonts/font = SubResource( 11 )
 text = "SFX"
 
-[node name="BajarVolum" type="Button" parent="PanelPrincipal/VBoxContainer/VolumenSFX"]
+[node name="BajarVolum" type="Button" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenSFX"]
 margin_left = 192.0
 margin_right = 212.0
 margin_bottom = 27.0
 custom_fonts/font = SubResource( 19 )
 text = "-"
 script = ExtResource( 4 )
-nodo_sfx = NodePath("../../../../BotonSFX")
+nodo_sfx = NodePath("../../../../../../BotonSFX")
 
-[node name="NivelVolumen" type="Label" parent="PanelPrincipal/VBoxContainer/VolumenSFX"]
+[node name="NivelVolumen" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenSFX"]
 margin_left = 216.0
 margin_top = 4.0
 margin_right = 249.0
@@ -313,7 +351,7 @@ margin_bottom = 22.0
 custom_fonts/font = SubResource( 21 )
 text = "100"
 
-[node name="SubirVolum" type="Button" parent="PanelPrincipal/VBoxContainer/VolumenSFX"]
+[node name="SubirVolum" type="Button" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenSFX"]
 margin_left = 253.0
 margin_right = 273.0
 margin_bottom = 27.0
@@ -323,7 +361,170 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-nodo_sfx = NodePath("../../../../BotonSFX")
+nodo_sfx = NodePath("../../../../../../BotonSFX")
+
+[node name="Inputs" type="Tabs" parent="ContenedorTabulador"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 40.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="PanelInput" type="Panel" parent="ContenedorTabulador/Inputs"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -352.0
+margin_top = -232.0
+margin_right = 352.0
+margin_bottom = 232.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ContenedorTabulador/Inputs/PanelInput"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -309.5
+margin_top = 35.0
+margin_right = 309.5
+margin_bottom = 27.0
+custom_fonts/font = SubResource( 27 )
+text = "click en el boton para asignar tecla"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ContenedorRemapeo" type="VBoxContainer" parent="ContenedorTabulador/Inputs/PanelInput"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -352.0
+margin_top = -109.0
+margin_right = 352.0
+margin_bottom = 109.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AccionSalto" parent="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo" instance=ExtResource( 7 )]
+margin_top = 18.0
+margin_right = 704.0
+margin_bottom = 51.0
+
+[node name="NombreAccion" parent="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo/AccionSalto" index="0"]
+margin_left = 240.0
+margin_right = 349.0
+text = "saltar"
+
+[node name="VSeparator" parent="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo/AccionSalto" index="1"]
+margin_left = 353.0
+margin_right = 357.0
+
+[node name="InputAccion" parent="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo/AccionSalto" index="2"]
+margin_left = 361.0
+margin_right = 463.0
+accion = "saltar"
+
+[node name="AccionAdelante" parent="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo" instance=ExtResource( 7 )]
+margin_top = 55.0
+margin_right = 704.0
+margin_bottom = 88.0
+
+[node name="NombreAccion" parent="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo/AccionAdelante" index="0"]
+margin_left = 214.0
+margin_right = 376.0
+text = "adelante"
+
+[node name="VSeparator" parent="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo/AccionAdelante" index="1"]
+margin_left = 380.0
+margin_right = 384.0
+
+[node name="InputAccion" parent="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo/AccionAdelante" index="2"]
+margin_left = 388.0
+margin_right = 490.0
+accion = "mov_adelante"
+
+[node name="AccionAtras" parent="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo" instance=ExtResource( 7 )]
+margin_top = 92.0
+margin_right = 704.0
+margin_bottom = 125.0
+
+[node name="NombreAccion" parent="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo/AccionAtras" index="0"]
+margin_left = 247.0
+margin_right = 343.0
+text = "atras"
+
+[node name="VSeparator" parent="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo/AccionAtras" index="1"]
+margin_left = 347.0
+margin_right = 351.0
+
+[node name="InputAccion" parent="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo/AccionAtras" index="2"]
+margin_left = 355.0
+margin_right = 457.0
+accion = "mov_atras"
+
+[node name="AccionIzquierda" parent="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo" instance=ExtResource( 7 )]
+margin_top = 129.0
+margin_right = 704.0
+margin_bottom = 162.0
+
+[node name="NombreAccion" parent="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo/AccionIzquierda" index="0"]
+margin_left = 216.0
+margin_right = 373.0
+text = "izquierda"
+
+[node name="VSeparator" parent="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo/AccionIzquierda" index="1"]
+margin_left = 377.0
+margin_right = 381.0
+
+[node name="InputAccion" parent="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo/AccionIzquierda" index="2"]
+margin_left = 385.0
+margin_right = 487.0
+accion = "mov_izq"
+
+[node name="AccionDerecha" parent="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo" instance=ExtResource( 7 )]
+margin_top = 166.0
+margin_right = 704.0
+margin_bottom = 199.0
+
+[node name="NombreAccion" parent="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo/AccionDerecha" index="0"]
+margin_left = 223.0
+margin_right = 367.0
+text = "derecha"
+
+[node name="VSeparator" parent="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo/AccionDerecha" index="1"]
+margin_left = 371.0
+margin_right = 375.0
+
+[node name="InputAccion" parent="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo/AccionDerecha" index="2"]
+margin_left = 379.0
+margin_right = 481.0
+accion = "mov_der"
+
+[node name="AccionDisparar" parent="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo" instance=ExtResource( 7 )]
+visible = false
+margin_top = 185.0
+margin_bottom = 218.0
+
+[node name="NombreAccion" parent="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo/AccionDisparar" index="0"]
+margin_left = 355.0
+margin_right = 483.0
+text = "Disparo"
+
+[node name="VSeparator" parent="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo/AccionDisparar" index="1"]
+margin_left = 487.0
+margin_right = 491.0
+
+[node name="InputAccion" parent="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo/AccionDisparar" index="2"]
+margin_left = 495.0
+margin_right = 597.0
+accion = "disparar"
 
 [node name="BotonRegreso" type="Button" parent="."]
 anchor_left = 0.5
@@ -340,20 +541,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BotonSFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
-bus = "SFX"
-
-[node name="Musica" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
-bus = "Musica"
-
-[connection signal="item_selected" from="PanelPrincipal/VBoxContainer/Resolucion/OpcionResolucion" to="." method="_on_OpcionResolucion_item_selected"]
-[connection signal="toggled" from="PanelPrincipal/VBoxContainer/PantallaCompleta" to="." method="_on_PantallaCompleta_toggled"]
-[connection signal="pressed" from="PanelPrincipal/VBoxContainer/VolumenGeneral/BajarVolum" to="." method="_on_General_BajarVolum_pressed"]
-[connection signal="pressed" from="PanelPrincipal/VBoxContainer/VolumenGeneral/SubirVolum" to="." method="_on_General_SubirVolum_pressed"]
-[connection signal="pressed" from="PanelPrincipal/VBoxContainer/VolumenMusica/BajarVolum" to="." method="_on_Musica_BajarVolum_pressed"]
-[connection signal="pressed" from="PanelPrincipal/VBoxContainer/VolumenMusica/SubirVolum" to="." method="_on_Musica_SubirVolum_pressed"]
-[connection signal="pressed" from="PanelPrincipal/VBoxContainer/VolumenSFX/BajarVolum" to="." method="_on_SFX_BajarVolum_pressed"]
-[connection signal="pressed" from="PanelPrincipal/VBoxContainer/VolumenSFX/SubirVolum" to="." method="_on_SFX_SubirVolum_pressed"]
+[connection signal="item_selected" from="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/Resolucion/OpcionResolucion" to="." method="_on_OpcionResolucion_item_selected"]
+[connection signal="toggled" from="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/PantallaCompleta" to="." method="_on_PantallaCompleta_toggled"]
+[connection signal="pressed" from="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenGeneral/BajarVolum" to="." method="_on_General_BajarVolum_pressed"]
+[connection signal="pressed" from="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenGeneral/SubirVolum" to="." method="_on_General_SubirVolum_pressed"]
+[connection signal="pressed" from="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenMusica/BajarVolum" to="." method="_on_Musica_BajarVolum_pressed"]
+[connection signal="pressed" from="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenMusica/SubirVolum" to="." method="_on_Musica_SubirVolum_pressed"]
+[connection signal="pressed" from="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenSFX/BajarVolum" to="." method="_on_SFX_BajarVolum_pressed"]
+[connection signal="pressed" from="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenSFX/SubirVolum" to="." method="_on_SFX_SubirVolum_pressed"]
 [connection signal="pressed" from="BotonRegreso" to="." method="_on_BotonRegreso_pressed"]
+
+[editable path="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo/AccionSalto"]
+[editable path="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo/AccionAdelante"]
+[editable path="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo/AccionAtras"]
+[editable path="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo/AccionIzquierda"]
+[editable path="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo/AccionDerecha"]
+[editable path="ContenedorTabulador/Inputs/PanelInput/ContenedorRemapeo/AccionDisparar"]

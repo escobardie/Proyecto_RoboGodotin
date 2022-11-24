@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://juego/Menus/Contenedores/InputAccion.gd" type="Script" id=1]
+
+[sub_resource type="DynamicFontData" id=30]
+font_path = "res://juego/Menus/Revamped.otf"
+
+[sub_resource type="DynamicFont" id=28]
+size = 25
+font_data = SubResource( 30 )
+
+[sub_resource type="DynamicFontData" id=31]
+font_path = "res://juego/Menus/Revamped.otf"
+
+[sub_resource type="DynamicFont" id=29]
+size = 25
+font_data = SubResource( 31 )
+
+[node name="ContenedorAccion" type="HBoxContainer"]
+margin_right = 952.0
+margin_bottom = 33.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NombreAccion" type="Label" parent="."]
+margin_left = 364.0
+margin_top = 3.0
+margin_right = 474.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 28 )
+text = "accion"
+
+[node name="VSeparator" type="VSeparator" parent="."]
+margin_left = 478.0
+margin_right = 482.0
+margin_bottom = 33.0
+
+[node name="InputAccion" type="Button" parent="."]
+margin_left = 486.0
+margin_right = 588.0
+margin_bottom = 33.0
+custom_fonts/font = SubResource( 29 )
+toggle_mode = true
+text = "input"
+script = ExtResource( 1 )
+
+[connection signal="toggled" from="InputAccion" to="InputAccion" method="_on_toggled"]

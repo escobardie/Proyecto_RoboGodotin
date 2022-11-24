@@ -6,8 +6,8 @@ export(String, FILE, "*.tscn") var menu_inicial = ""
 
 ## ATRIBUTOS ONREADY
 onready var musica_menu: AudioStreamPlayer = $Musica
-onready var boton_pantalla_completa: CheckBox = $PanelPrincipal/VBoxContainer/PantallaCompleta
-onready var opcion_resolucion: OptionButton = $PanelPrincipal/VBoxContainer/Resolucion/OpcionResolucion
+onready var boton_pantalla_completa: CheckBox = $ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/PantallaCompleta
+onready var opcion_resolucion: OptionButton = $ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/Resolucion/OpcionResolucion
 onready var resoluciones: Dictionary ={
 	"640 x 480": Vector2(640, 480),
 	"960 x 640": Vector2(960, 640), #resolcuin por defecto
@@ -22,9 +22,9 @@ onready var bus_indices := {
 	"SFX": AudioServer.get_bus_index("SFX")
 }
 onready var bus_etiquetas := {
-	"Master": $PanelPrincipal/VBoxContainer/VolumenGeneral/NivelVolumen,
-	"Musica": $PanelPrincipal/VBoxContainer/VolumenMusica/NivelVolumen,
-	"SFX": $PanelPrincipal/VBoxContainer/VolumenSFX/NivelVolumen
+	"Master": $ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenGeneral/NivelVolumen,
+	"Musica": $ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenMusica/NivelVolumen,
+	"SFX": $ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenSFX/NivelVolumen
 }
 
 ## METODOS
