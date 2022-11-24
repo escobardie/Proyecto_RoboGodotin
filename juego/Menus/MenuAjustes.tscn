@@ -1,0 +1,359 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://juego/interfaz/Kenney Future.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://juego/Menus/MenuAjustes.gd" type="Script" id=2]
+[ext_resource path="res://juego/Menus/BotonSFX.wav" type="AudioStream" id=3]
+[ext_resource path="res://juego/Menus/CambiaVolumen.gd" type="Script" id=4]
+[ext_resource path="res://juego/Menus/guerra-de-las-galaxias-starwras-musica-.mp3" type="AudioStream" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 37
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://juego/Menus/Revamped.otf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = SubResource( 2 )
+
+[sub_resource type="DynamicFontData" id=4]
+font_path = "res://juego/Menus/Revamped.otf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 25
+font_data = SubResource( 4 )
+
+[sub_resource type="DynamicFontData" id=16]
+font_path = "res://juego/Menus/Revamped.otf"
+
+[sub_resource type="DynamicFont" id=17]
+size = 20
+font_data = SubResource( 16 )
+
+[sub_resource type="DynamicFontData" id=6]
+font_path = "res://juego/Menus/Revamped.otf"
+
+[sub_resource type="DynamicFont" id=7]
+size = 25
+font_data = SubResource( 6 )
+
+[sub_resource type="DynamicFontData" id=8]
+font_path = "res://juego/Menus/Revamped.otf"
+
+[sub_resource type="DynamicFont" id=9]
+size = 25
+font_data = SubResource( 8 )
+
+[sub_resource type="DynamicFontData" id=10]
+font_path = "res://juego/Menus/Revamped.otf"
+
+[sub_resource type="DynamicFont" id=11]
+size = 25
+font_data = SubResource( 10 )
+
+[sub_resource type="DynamicFontData" id=18]
+font_path = "res://juego/Menus/Revamped.otf"
+
+[sub_resource type="DynamicFont" id=19]
+font_data = SubResource( 18 )
+
+[sub_resource type="DynamicFontData" id=20]
+font_path = "res://juego/Menus/Revamped.otf"
+
+[sub_resource type="DynamicFont" id=21]
+font_data = SubResource( 20 )
+
+[sub_resource type="DynamicFontData" id=22]
+font_path = "res://juego/Menus/Revamped.otf"
+
+[sub_resource type="DynamicFont" id=23]
+font_data = SubResource( 22 )
+
+[sub_resource type="DynamicFontData" id=24]
+font_path = "res://juego/interfaz/Kenney Future.ttf"
+
+[sub_resource type="DynamicFont" id=25]
+size = 27
+font_data = SubResource( 24 )
+
+[node name="MenuAjustes" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 64.0, 576.0 ],
+"_edit_use_anchors_": false,
+"_edit_vertical_guides_": [ 128.0, 832.0, 480.0 ]
+}
+menu_inicial = "res://juego/Menus/MenuInicio.tscn"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Titulo" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -106.0
+margin_top = 21.0
+margin_right = 106.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+text = "AJUSTES"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelPrincipal" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -352.0
+margin_top = -256.0
+margin_right = 352.0
+margin_bottom = 256.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelPrincipal"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -200.0
+margin_right = 200.0
+margin_bottom = 200.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pantalla" type="Label" parent="PanelPrincipal/VBoxContainer"]
+margin_top = 60.0
+margin_right = 400.0
+margin_bottom = 113.0
+custom_fonts/font = SubResource( 3 )
+text = "PANTALLA"
+align = 1
+
+[node name="HSeparator" type="HSeparator" parent="PanelPrincipal/VBoxContainer"]
+margin_top = 117.0
+margin_right = 400.0
+margin_bottom = 121.0
+
+[node name="Resolucion" type="HBoxContainer" parent="PanelPrincipal/VBoxContainer"]
+margin_top = 125.0
+margin_right = 400.0
+margin_bottom = 153.0
+alignment = 1
+
+[node name="TextoResolucion" type="Label" parent="PanelPrincipal/VBoxContainer/Resolucion"]
+margin_left = 18.0
+margin_right = 211.0
+margin_bottom = 27.0
+custom_fonts/font = SubResource( 5 )
+text = "RESOLUCION"
+
+[node name="OpcionResolucion" type="OptionButton" parent="PanelPrincipal/VBoxContainer/Resolucion"]
+margin_left = 215.0
+margin_right = 381.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 17 )
+text = "1920x1080"
+
+[node name="HSeparator3" type="HSeparator" parent="PanelPrincipal/VBoxContainer"]
+margin_top = 157.0
+margin_right = 400.0
+margin_bottom = 161.0
+
+[node name="PantallaCompleta" type="CheckBox" parent="PanelPrincipal/VBoxContainer"]
+margin_top = 165.0
+margin_right = 400.0
+margin_bottom = 200.0
+custom_fonts/font = SubResource( 7 )
+text = "PANTALLA COMPLETA"
+align = 1
+script = ExtResource( 4 )
+nodo_sfx = NodePath("../../../BotonSFX")
+
+[node name="HSeparator2" type="HSeparator" parent="PanelPrincipal/VBoxContainer"]
+margin_top = 204.0
+margin_right = 400.0
+margin_bottom = 208.0
+
+[node name="Volumen" type="Label" parent="PanelPrincipal/VBoxContainer"]
+margin_top = 212.0
+margin_right = 400.0
+margin_bottom = 239.0
+custom_fonts/font = SubResource( 9 )
+text = "VOLUMEN"
+align = 1
+
+[node name="HSeparator4" type="HSeparator" parent="PanelPrincipal/VBoxContainer"]
+margin_top = 243.0
+margin_right = 400.0
+margin_bottom = 247.0
+
+[node name="VolumenGeneral" type="HBoxContainer" parent="PanelPrincipal/VBoxContainer"]
+margin_top = 251.0
+margin_right = 400.0
+margin_bottom = 278.0
+alignment = 1
+
+[node name="TextoVolumen" type="Label" parent="PanelPrincipal/VBoxContainer/VolumenGeneral"]
+margin_left = 86.0
+margin_right = 229.0
+margin_bottom = 27.0
+custom_fonts/font = SubResource( 11 )
+text = "GENERAL"
+
+[node name="BajarVolum" type="Button" parent="PanelPrincipal/VBoxContainer/VolumenGeneral"]
+margin_left = 233.0
+margin_right = 253.0
+margin_bottom = 27.0
+custom_fonts/font = SubResource( 19 )
+text = "-"
+script = ExtResource( 4 )
+nodo_sfx = NodePath("../../../../BotonSFX")
+
+[node name="NivelVolumen" type="Label" parent="PanelPrincipal/VBoxContainer/VolumenGeneral"]
+margin_left = 257.0
+margin_top = 4.0
+margin_right = 290.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 21 )
+text = "100"
+
+[node name="SubirVolum" type="Button" parent="PanelPrincipal/VBoxContainer/VolumenGeneral"]
+margin_left = 294.0
+margin_right = 314.0
+margin_bottom = 27.0
+custom_fonts/font = SubResource( 23 )
+text = "+"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+nodo_sfx = NodePath("../../../../BotonSFX")
+
+[node name="VolumenMusica" type="HBoxContainer" parent="PanelPrincipal/VBoxContainer"]
+margin_top = 282.0
+margin_right = 400.0
+margin_bottom = 309.0
+alignment = 1
+
+[node name="TextoVolumen" type="Label" parent="PanelPrincipal/VBoxContainer/VolumenMusica"]
+margin_left = 101.0
+margin_right = 214.0
+margin_bottom = 27.0
+custom_fonts/font = SubResource( 11 )
+text = "MUSICA"
+
+[node name="BajarVolum" type="Button" parent="PanelPrincipal/VBoxContainer/VolumenMusica"]
+margin_left = 218.0
+margin_right = 238.0
+margin_bottom = 27.0
+custom_fonts/font = SubResource( 19 )
+text = "-"
+script = ExtResource( 4 )
+nodo_sfx = NodePath("../../../../BotonSFX")
+
+[node name="NivelVolumen" type="Label" parent="PanelPrincipal/VBoxContainer/VolumenMusica"]
+margin_left = 242.0
+margin_top = 4.0
+margin_right = 275.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 21 )
+text = "100"
+
+[node name="SubirVolum" type="Button" parent="PanelPrincipal/VBoxContainer/VolumenMusica"]
+margin_left = 279.0
+margin_right = 299.0
+margin_bottom = 27.0
+custom_fonts/font = SubResource( 23 )
+text = "+"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+nodo_sfx = NodePath("../../../../BotonSFX")
+
+[node name="VolumenSFX" type="HBoxContainer" parent="PanelPrincipal/VBoxContainer"]
+margin_top = 313.0
+margin_right = 400.0
+margin_bottom = 340.0
+alignment = 1
+
+[node name="TextoVolumen" type="Label" parent="PanelPrincipal/VBoxContainer/VolumenSFX"]
+margin_left = 127.0
+margin_right = 188.0
+margin_bottom = 27.0
+custom_fonts/font = SubResource( 11 )
+text = "SFX"
+
+[node name="BajarVolum" type="Button" parent="PanelPrincipal/VBoxContainer/VolumenSFX"]
+margin_left = 192.0
+margin_right = 212.0
+margin_bottom = 27.0
+custom_fonts/font = SubResource( 19 )
+text = "-"
+script = ExtResource( 4 )
+nodo_sfx = NodePath("../../../../BotonSFX")
+
+[node name="NivelVolumen" type="Label" parent="PanelPrincipal/VBoxContainer/VolumenSFX"]
+margin_left = 216.0
+margin_top = 4.0
+margin_right = 249.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 21 )
+text = "100"
+
+[node name="SubirVolum" type="Button" parent="PanelPrincipal/VBoxContainer/VolumenSFX"]
+margin_left = 253.0
+margin_right = 273.0
+margin_bottom = 27.0
+custom_fonts/font = SubResource( 23 )
+text = "+"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+nodo_sfx = NodePath("../../../../BotonSFX")
+
+[node name="BotonRegreso" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -148.0
+margin_top = -59.0
+margin_right = 148.0
+margin_bottom = -22.0
+custom_fonts/font = SubResource( 25 )
+text = "MENU PRINCIPAL"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotonSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+bus = "SFX"
+
+[node name="Musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+bus = "Musica"
+
+[connection signal="item_selected" from="PanelPrincipal/VBoxContainer/Resolucion/OpcionResolucion" to="." method="_on_OpcionResolucion_item_selected"]
+[connection signal="toggled" from="PanelPrincipal/VBoxContainer/PantallaCompleta" to="." method="_on_PantallaCompleta_toggled"]
+[connection signal="pressed" from="PanelPrincipal/VBoxContainer/VolumenGeneral/BajarVolum" to="." method="_on_General_BajarVolum_pressed"]
+[connection signal="pressed" from="PanelPrincipal/VBoxContainer/VolumenGeneral/SubirVolum" to="." method="_on_General_SubirVolum_pressed"]
+[connection signal="pressed" from="PanelPrincipal/VBoxContainer/VolumenMusica/BajarVolum" to="." method="_on_Musica_BajarVolum_pressed"]
+[connection signal="pressed" from="PanelPrincipal/VBoxContainer/VolumenMusica/SubirVolum" to="." method="_on_Musica_SubirVolum_pressed"]
+[connection signal="pressed" from="PanelPrincipal/VBoxContainer/VolumenSFX/BajarVolum" to="." method="_on_SFX_BajarVolum_pressed"]
+[connection signal="pressed" from="PanelPrincipal/VBoxContainer/VolumenSFX/SubirVolum" to="." method="_on_SFX_SubirVolum_pressed"]
+[connection signal="pressed" from="BotonRegreso" to="." method="_on_BotonRegreso_pressed"]
