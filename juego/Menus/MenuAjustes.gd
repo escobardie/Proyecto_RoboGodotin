@@ -85,6 +85,8 @@ func cambiar_volumen(indice_bus: int, subir:bool) -> void:
 
 ## SEÑALES INTERNAS
 func _on_BotonRegreso_pressed() -> void:
+	var guardar: GuardarCargar = GuardarCargar.new()
+	guardar.guardar_datos_configuracion()
 # warning-ignore:return_value_discarded
 	get_tree().change_scene(menu_inicial)
 

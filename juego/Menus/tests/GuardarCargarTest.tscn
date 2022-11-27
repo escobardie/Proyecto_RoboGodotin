@@ -1,0 +1,128 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://juego/Menus/tests/GuardarCargarTest.gd" type="Script" id=1]
+
+[node name="GuardarCargarTest" type="Node"]
+script = ExtResource( 1 )
+
+[node name="BotonGuardar" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -110.0
+margin_top = -199.0
+margin_right = -34.0
+margin_bottom = -179.0
+text = "GUARDAR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotonCargar" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 41.0
+margin_top = -198.0
+margin_right = 117.0
+margin_bottom = -178.0
+text = "CARGAR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -104.0
+margin_top = 250.0
+margin_right = 102.0
+margin_bottom = 264.0
+text = "HOLA MUNDO, MI NOMBRE ES:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextoResultadoJSON" type="Label" parent="."]
+margin_left = 616.0
+margin_top = 316.0
+margin_right = 692.0
+margin_bottom = 330.0
+text = "RESULTADO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextoResultadoTRES" type="Label" parent="."]
+margin_left = 616.0
+margin_top = 360.0
+margin_right = 692.0
+margin_bottom = 374.0
+text = "RESULTADO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NombreJSON" type="LineEdit" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -97.0
+margin_top = -22.0
+margin_right = 98.0
+margin_bottom = 15.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NombreTRES" type="LineEdit" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -95.0
+margin_top = 31.0
+margin_right = 98.0
+margin_bottom = 67.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotonGuardarGodot" type="Button" parent="."]
+margin_left = 286.0
+margin_top = 501.0
+margin_right = 450.0
+margin_bottom = 521.0
+text = "GUARDAR A LO GODOT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotonCargarGodot" type="Button" parent="."]
+margin_left = 522.0
+margin_top = 503.0
+margin_right = 674.0
+margin_bottom = 523.0
+text = "CARGAR A LO GODOT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotonBorrar" type="Button" parent="."]
+margin_left = 428.0
+margin_top = 552.0
+margin_right = 545.0
+margin_bottom = 572.0
+text = "borrar a lo godot"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="BotonGuardar" to="." method="_on_BotonGuardar_pressed"]
+[connection signal="pressed" from="BotonCargar" to="." method="_on_BotonCargar_pressed"]
+[connection signal="pressed" from="BotonGuardarGodot" to="." method="_on_BotonGuardarGodot_pressed"]
+[connection signal="pressed" from="BotonCargarGodot" to="." method="_on_BotonCargarGodot_pressed"]
+[connection signal="pressed" from="BotonBorrar" to="." method="_on_BotonBorrar_pressed"]

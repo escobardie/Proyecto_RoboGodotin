@@ -14,10 +14,25 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://juego/player/ArbolAnimacion.gd"
 }, {
+"base": "Resource",
+"class": "DatosAjustesGuardado",
+"language": "GDScript",
+"path": "res://juego/Almacenamiento/DatosAjustesGuardado.gd"
+}, {
+"base": "Resource",
+"class": "DatosUsuarioGuardado",
+"language": "GDScript",
+"path": "res://juego/Almacenamiento/DatosUsuarioGuardado.gd"
+}, {
 "base": "KinematicBody",
 "class": "Godotin",
 "language": "GDScript",
 "path": "res://juego/player/Godotin.gd"
+}, {
+"base": "Node",
+"class": "GuardarCargar",
+"language": "GDScript",
+"path": "res://juego/Almacenamiento/GuardarCargar.gd"
 }, {
 "base": "Area",
 "class": "Moneda",
@@ -36,7 +51,10 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "ArbolAnimacionPlayer": "",
+"DatosAjustesGuardado": "",
+"DatosUsuarioGuardado": "",
 "Godotin": "",
+"GuardarCargar": "",
 "Moneda": "",
 "Nivel": "",
 "PortalNivel": ""
@@ -46,6 +64,8 @@ _global_script_class_icons={
 
 config/name="RoboGodotin"
 run/main_scene="res://juego/Niveles/NivelTest.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="RoboGodotin"
 config/icon="res://logo_3.png"
 
 [autoload]
@@ -54,6 +74,10 @@ Eventos="*res://juego/autoloads/Eventos.gd"
 DatosJuego="*res://juego/autoloads/DatosJuego.gd"
 DatosConfiguracion="*res://juego/autoloads/DatosConfiguracion.gd"
 CargaSegundoPlano="*res://juego/autoloads/CargaSegundoPlano.tscn"
+
+[debug]
+
+gdscript/warnings/unused_signal=false
 
 [display]
 

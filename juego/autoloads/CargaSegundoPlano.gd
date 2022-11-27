@@ -14,7 +14,7 @@ func _ready() -> void:
 	barra_progreso.visible  = false
 	texto_completo.visible  = false
 
-func _unhandled_input(event: InputEvent) -> void:
+func _unhandled_input(_event: InputEvent) -> void:
 	if puede_iniciar:
 		get_tree().current_scene.queue_free()
 		get_tree().current_scene = null

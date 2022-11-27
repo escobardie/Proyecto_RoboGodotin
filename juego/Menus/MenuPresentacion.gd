@@ -6,6 +6,11 @@ extends Control
 ## ATRIBUTOS EXPORT
 export(String, FILE, "*.tscn") var menu_inicial = ""
 
+## METODOS
+func _ready() -> void:
+	var cargar: GuardarCargar = GuardarCargar.new()
+	cargar.cargar_datos_configuracion()
+
 
 ## METODOS CUSTOM
 func _get_configuration_warning() -> String:
@@ -16,3 +21,4 @@ func _get_configuration_warning() -> String:
 
 func cargar_menu() -> void:
 	get_tree().change_scene(menu_inicial)
+
