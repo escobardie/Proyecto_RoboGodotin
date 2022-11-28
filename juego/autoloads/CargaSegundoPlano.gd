@@ -30,6 +30,7 @@ func _unhandled_input(_event: InputEvent) -> void:
 ## METODOS CUSTOM
 func cargar_nivel(nivel:String) -> void:
 	hilo = Thread.new()
+# warning-ignore:return_value_discarded
 	hilo.start(self, "cargar_hilo", nivel, 2)
 	raise()
 	barra_progreso.visible = true

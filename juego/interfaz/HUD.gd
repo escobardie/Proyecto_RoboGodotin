@@ -5,7 +5,7 @@ extends Control
 onready var etiqueta_vidas = $ContenedorVidas/Cantidad
 #variables para las etiqueta de las monedas
 onready var etiqueta_moneda_oro = $ContenedorMonedasOro/Cantidad
-onready var etiqueta_nombre = $ContenedorNombre/Cantidad
+
 
 
 ## METODOS
@@ -19,7 +19,6 @@ func actualizar_hud():
 	#con los comandos   "%s" %  convertimos una cadena de numero a string
 	etiqueta_vidas.text = "%s" % DatosJuego.vidas
 	etiqueta_moneda_oro.text = "%s" % DatosJuego.moneda_oro
-	etiqueta_nombre.text = "Nivel: {num}".format({"num": DatosJuego.num_nivel_actual})
-	#etiqueta_nombre.text = "nivel: %s" % DatosJuego.numero_nivel
+	
 
 

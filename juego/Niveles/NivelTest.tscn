@@ -24,7 +24,7 @@ extents = Vector3( 25, 0.001, 25 )
 [node name="NivelTest" type="Node"]
 script = ExtResource( 9 )
 numero_nivel = 1
-proximo_nivel = "res://juego/Niveles/NivelTest_2.tscn"
+proximo_nivel = "res://juego/Niveles/NivelTest.tscn"
 
 [node name="HUD" parent="." instance=ExtResource( 8 )]
 

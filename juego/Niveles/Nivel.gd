@@ -9,7 +9,7 @@ export(String, FILE, "*.tscn") var proximo_nivel= ""
 
 ## METODOS
 func _ready() -> void:
-	yield(get_tree().create_timer(4.0), "timeout")
+	#yield(get_tree().create_timer(4.0), "timeout")
 	actualizar_datos()
 
 
