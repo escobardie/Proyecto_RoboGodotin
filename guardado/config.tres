@@ -7,7 +7,7 @@ script = ExtResource( 1 )
 pantalla_completa = false
 pantalla_resolucion = Vector2( 1360, 705 )
 volumen_buses = {
-"master": -9.625,
-"musica": -19.6729,
-"sfx": -19.6729
+"master": 0.375,
+"musica": -9.6729,
+"sfx": -5.6729
 }

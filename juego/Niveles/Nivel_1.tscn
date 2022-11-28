@@ -19,7 +19,7 @@ mesh = SubResource( 2 )
 material/0 = null
 
 [node name="Sierra" parent="ContenedorObjetos" index="0" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.12185, 0.757456, 2.01284 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.16439, 0.757456, 2.01284 )
 audio_bus_name = "SFX"
 
 [node name="Ambiente" parent="." index="9"]

@@ -75,6 +75,12 @@ DatosJuego="*res://juego/autoloads/DatosJuego.gd"
 DatosConfiguracion="*res://juego/autoloads/DatosConfiguracion.gd"
 CargaSegundoPlano="*res://juego/autoloads/CargaSegundoPlano.tscn"
 
+[debug]
+
+gdscript/warnings/unused_variable=false
+gdscript/warnings/unused_signal=false
+gdscript/warnings/return_value_discarded=false
+
 [display]
 
 window/size/width=960

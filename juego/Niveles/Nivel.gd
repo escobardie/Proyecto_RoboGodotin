@@ -14,8 +14,8 @@ onready var sfx_ambiente: AudioStreamPlayer = $Ambiente
 func _ready() -> void:
 	sfx_ambiente.play()
 # warning-ignore:return_value_discarded
-	Eventos.connect("game_over",self, "_on_game_over")
-	yield(get_tree().create_timer(4.0), "timeout")
+	#Eventos.connect("game_over",self, "_on_game_over")
+	yield(get_tree().create_timer(0.4), "timeout")
 	actualizar_datos()
 
 
