@@ -7,6 +7,8 @@ extends Node
 export var numero_nivel:int = 0
 export(String, FILE, "*.tscn") var proximo_nivel= ""
 
+
+
 ## METODOS
 func _ready() -> void:
 	yield(get_tree().create_timer(4.0), "timeout")
