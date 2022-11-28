@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://juego/Bloques/ColumnaBloques.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://juego/Niveles/Ambiente/ambiente pueblo otoño-estorninos.mp3" type="AudioStream" id=3]
 [ext_resource path="res://juego/interfaz/HUD.tscn" type="PackedScene" id=8]
 [ext_resource path="res://juego/Niveles/Nivel.gd" type="Script" id=9]
 [ext_resource path="res://juego/Niveles/Portal.tscn" type="PackedScene" id=10]
@@ -663,3 +664,8 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2, 0, 0 )
 
 [node name="Portal" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 1.86961, 0, 5.55161 )
+
+[node name="Ambiente" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -7.0
+bus = "SFX"

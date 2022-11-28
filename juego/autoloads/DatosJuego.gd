@@ -1,4 +1,5 @@
 #DatosJuego.gd
+
 extends Node
 
 #script con patron singleton, quiere decir que no se vera afectado
@@ -26,20 +27,21 @@ func reset():
 
 
 #metodo para calcular los puntos al momento de ganar la partida
-func generar_puntaje():
+func generar_puntaje() -> int:
 	var valor_oro = moneda_oro * 10
 	puntaje_monedas = valor_oro
 	return puntaje_monedas
 
 
-func restar_vidas():
+func restar_vidas() -> void:
+	#var player: Godotin = Godotin.new()
 	vidas -= 1
 	if vidas == 0:
-		#emitimos la señal
+		#player.game_over()
 		Eventos.emit_signal("game_over")
 	Eventos.emit_signal("actualizar_hub")
 
 
-func sumar_monedas():
+func sumar_monedas() -> void:
 	moneda_oro += 1
 	Eventos.emit_signal("actualizar_hub")

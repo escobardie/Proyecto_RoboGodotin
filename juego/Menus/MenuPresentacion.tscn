@@ -152,9 +152,8 @@ texture = ExtResource( 2 )
 [node name="Label" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -480.0
 margin_top = 100.0
-margin_right = 480.0
+margin_right = 960.0
 margin_bottom = 164.0
 custom_fonts/font = SubResource( 1 )
 text = "GODOT GAME ENGINE"
@@ -171,4 +170,4 @@ anims/presentacion = SubResource( 3 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -17.0
-bus = "SFX"
+bus = "Musica"

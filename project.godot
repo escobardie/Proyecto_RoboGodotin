@@ -63,7 +63,7 @@ _global_script_class_icons={
 [application]
 
 config/name="RoboGodotin"
-run/main_scene="res://juego/Niveles/NivelTest.tscn"
+run/main_scene="res://juego/Menus/MenuPresentacion.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="RoboGodotin"
 config/icon="res://logo_3.png"
@@ -74,12 +74,6 @@ Eventos="*res://juego/autoloads/Eventos.gd"
 DatosJuego="*res://juego/autoloads/DatosJuego.gd"
 DatosConfiguracion="*res://juego/autoloads/DatosConfiguracion.gd"
 CargaSegundoPlano="*res://juego/autoloads/CargaSegundoPlano.tscn"
-
-[debug]
-
-gdscript/warnings/function_may_yield=false
-gdscript/warnings/unused_signal=false
-gdscript/warnings/return_value_discarded=false
 
 [display]
 

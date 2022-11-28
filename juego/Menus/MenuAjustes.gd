@@ -44,8 +44,8 @@ func cargar_resoluciones() -> void:
 
 func centrar_pantalla(resolucion: Vector2) -> void:
 	var tamanio_pantalla := OS.get_screen_size()
-	print(tamanio_pantalla)
-	print(resolucion)
+	#print(tamanio_pantalla)
+	#print(resolucion)
 	OS.set_window_position(tamanio_pantalla * 0.5 - resolucion * 0.5)
 
 func chequear_resolucion_actual() -> void:

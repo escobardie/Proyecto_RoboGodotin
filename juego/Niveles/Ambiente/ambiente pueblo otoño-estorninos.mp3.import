@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ambiente pueblo otoño-estorninos.mp3-b2813a2237db2261242182ce29ffcf32.mp3str"
+
+[deps]
+
+source_file="res://juego/Niveles/Ambiente/ambiente pueblo otoño-estorninos.mp3"
+dest_files=[ "res://.import/ambiente pueblo otoño-estorninos.mp3-b2813a2237db2261242182ce29ffcf32.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

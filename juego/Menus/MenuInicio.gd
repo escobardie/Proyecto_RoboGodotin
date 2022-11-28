@@ -8,8 +8,14 @@ export(String, FILE, "*.tscn") var nivel_inicial = ""
 export(String, FILE, "*.tscn") var pantalla_carga = ""
 
 
+
+
+onready var musica_menu: AudioStreamPlayer = $Musica
+
+
 ## METODOS
 func _ready() -> void:
+	musica_menu.play()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _get_configuration_warning() -> String:

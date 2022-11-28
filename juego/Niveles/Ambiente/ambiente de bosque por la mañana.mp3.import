@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ambiente de bosque por la mañana.mp3-340cf119344f8e0328922f7fe1f4bcd5.mp3str"
+
+[deps]
+
+source_file="res://juego/Niveles/Ambiente/ambiente de bosque por la mañana.mp3"
+dest_files=[ "res://.import/ambiente de bosque por la mañana.mp3-340cf119344f8e0328922f7fe1f4bcd5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

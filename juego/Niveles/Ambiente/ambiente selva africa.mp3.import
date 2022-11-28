@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ambiente selva africa.mp3-5f2ec203750f24bcc21dabfad37e6760.mp3str"
+
+[deps]
+
+source_file="res://juego/Niveles/Ambiente/ambiente selva africa.mp3"
+dest_files=[ "res://.import/ambiente selva africa.mp3-5f2ec203750f24bcc21dabfad37e6760.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

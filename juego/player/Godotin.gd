@@ -32,7 +32,8 @@ var disparado:bool = false
 
 ## METODOS
 func _ready() -> void:
-	pass # Replace with function body.
+	#Eventos.connect("game_over",self, "game_over")
+	pass
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("disparar"):
@@ -130,6 +131,13 @@ func respawn() -> void:
 	DatosJuego.restar_vidas()
 	get_tree().reload_current_scene()
 
-
-
+#func game_over() ->void:
+	#get_tree().change_scene_to(menu_game_over)
+#	print("entro GODOTIN al game over")
+	#get_tree().reload_current_scene()
+#	Eventos.emit_signal("game_over")
+# warning-ignore:return_value_discarded
+	#get_tree().change_scene("res://juego/Menus/MenuFinalCreditos.tscn")
+	#get_tree().quit()
+	#get_tree().change_scene(menu_game_over)
 

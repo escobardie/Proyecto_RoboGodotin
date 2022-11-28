@@ -27,6 +27,8 @@ func _unhandled_input(_event: InputEvent) -> void:
 		#opcional
 		queue_free()
 
+
+
 ## METODOS CUSTOM
 func cargar_nivel(nivel:String) -> void:
 	hilo = Thread.new()
@@ -40,9 +42,6 @@ func cargar_hilo(nivel: String) -> void:
 	var total_partes: int = recurso_interactivo.get_stage_count()
 	barra_progreso.max_value = total_partes
 	
-	#BORRAR solo para probar
-	print(barra_progreso.max_value)
-	
 	var resultado: int = OK
 	var recurso: Resource = null
 	
@@ -50,23 +49,18 @@ func cargar_hilo(nivel: String) -> void:
 		barra_progreso.value = recurso_interactivo.get_stage()
 		resultado = recurso_interactivo.poll()
 		
-		#BORRAR solo para probar
-		print("El resultado fue: ", resultado)
-		
 		if resultado != OK:
 			if resultado == ERR_FILE_EOF:
 				recurso = recurso_interactivo.get_resource()
 				barra_progreso.value = total_partes
 			else:
-				printerr("Hubo un error enla carga del recurso")
+				printerr("Hubo un error en la carga del recurso")
 	call_deferred("carga_completa", recurso)
-	#BORRAR solo para probar
-	print(recurso)
+
 
 func carga_completa(recurso: Resource) -> void:
 	texto_completo.visible = true
 	hilo.wait_to_finish()
 	escena_precargada = recurso.instance()
 	puede_iniciar = true
-
 
