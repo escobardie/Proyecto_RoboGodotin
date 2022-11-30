@@ -15,8 +15,15 @@ onready var musica_menu: AudioStreamPlayer = $Musica
 
 ## METODOS
 func _ready() -> void:
+	###################
+	var directory = Directory.new()
+	#consulta si exite el archivo donde quedo guardado el juego
+	if directory.file_exists("res://guardado/datos_juego.tres"):
+		$VBoxContainer/BotonCargar.set_deferred("disabled", false)
+	###################
 	musica_menu.play()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
 
 func _get_configuration_warning() -> String:
 	if menu_ajustes == "":
@@ -27,7 +34,6 @@ func _get_configuration_warning() -> String:
 	
 	if pantalla_carga == "":
 		return "CHEQUEAR RUTAS PANTALLA CARGA"
-	
 	
 	return ""
 
@@ -44,3 +50,10 @@ func _on_BotonNuevo_pressed() -> void:
 
 func _on_BotonSalir_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_BotonCargar_pressed() -> void:
+	var cargar: GuardarCargar = GuardarCargar.new()
+	cargar.cargar_datos_juego()
+	get_tree().change_scene(pantalla_carga)
+	

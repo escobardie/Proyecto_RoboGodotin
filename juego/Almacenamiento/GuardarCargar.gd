@@ -34,10 +34,15 @@ func guardar_datos_juegos() -> int:
 	
 	var datos: DatosUsuarioGuardado = DatosUsuarioGuardado.new()
 	datos.vidas = DatosJuego.vidas
-	datos.monedas_oro = DatosJuego.moneda_oro
+	datos.moneda_oro = DatosJuego.moneda_oro
 	datos.nivel_actual = DatosJuego.nivel_actual
 	datos.num_nivel_actual = DatosJuego.num_nivel_actual
 	datos.nivel_proximo = DatosJuego.nivel_proximo
+	########
+	#verdadero porque hay datos guardados
+	datos.juego_guardado = true
+	#datos.juego_guardado = DatosJuego.juego_guardado
+	########
 	
 	var resultado: int = ResourceSaver.save(ruta, datos)
 	
@@ -49,8 +54,16 @@ func guardar_datos_juegos() -> int:
 func cargar_datos_configuracion() -> void:
 	var ruta: String = seleccionar_ruta(CONFIG)
 	var dir: Directory = Directory.new()
+	#si no existe, se greara uno:
 	if not dir.file_exists(ruta):
 		guardar_datos_configuracion()
+	
+	
+	
+	######
+	#if not dir.file_exists(rutaJ):
+	#	guardar_datos_juegos()
+	######
 	
 	else:
 		var datos: Resource = load(ruta)
@@ -64,6 +77,14 @@ func cargar_datos_configuracion() -> void:
 		OS.set_window_position((tamanio_pantalla - datos.pantalla_resolucion) * 0.5)
 
 func cargar_datos_juego() -> void:
+	######
+	var rutaJ:  String = seleccionar_ruta(JUEGO)
+	var dir: Directory = Directory.new()
+	#si no existe, se greara uno:
+	if not dir.file_exists(rutaJ):
+		guardar_datos_juegos()
+	######
+	
 	var ruta: String = seleccionar_ruta(JUEGO)
 	var datos: Resource = load(ruta)
 	
@@ -72,6 +93,7 @@ func cargar_datos_juego() -> void:
 	DatosJuego.nivel_actual = datos.nivel_actual
 	DatosJuego.num_nivel_actual = datos.num_nivel_actual
 	DatosJuego.nivel_proximo = datos.nivel_proximo
+	DatosJuego.juego_guardado = datos.juego_guardado
 
 
 ## METODOS VARIOS

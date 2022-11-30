@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://juego/Almacenamiento/DatosUsuarioGuardado.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+vidas = 2
+moneda_oro = 0
+nivel_actual = "res://juego/Niveles/Nivel_Final.tscn"
+num_nivel_actual = 4
+nivel_proximo = "res://juego/Menus/MenuInicio.tscn"
+juego_guardado = true

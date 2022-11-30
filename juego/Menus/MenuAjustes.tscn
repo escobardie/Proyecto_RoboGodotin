@@ -96,7 +96,7 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_horizontal_guides_": [ 64.0, 576.0, 167.0 ],
 "_edit_use_anchors_": false,
-"_edit_vertical_guides_": [ 128.0, 832.0, 480.0 ]
+"_edit_vertical_guides_": [ 128.0, 832.0, 480.0, 680.0, 280.0 ]
 }
 menu_inicial = "res://juego/Menus/MenuInicio.tscn"
 
@@ -238,18 +238,19 @@ margin_bottom = 247.0
 margin_top = 251.0
 margin_right = 400.0
 margin_bottom = 278.0
-alignment = 1
+alignment = 2
 
 [node name="TextoVolumen" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenGeneral"]
 margin_left = 86.0
 margin_right = 229.0
 margin_bottom = 27.0
+size_flags_horizontal = 6
 custom_fonts/font = SubResource( 11 )
 text = "GENERAL"
 
 [node name="BajarVolum" type="Button" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenGeneral"]
-margin_left = 233.0
-margin_right = 253.0
+margin_left = 319.0
+margin_right = 339.0
 margin_bottom = 27.0
 custom_fonts/font = SubResource( 19 )
 text = "-"
@@ -257,16 +258,16 @@ script = ExtResource( 4 )
 nodo_sfx = NodePath("../../../../../../BotonSFX")
 
 [node name="NivelVolumen" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenGeneral"]
-margin_left = 257.0
+margin_left = 343.0
 margin_top = 4.0
-margin_right = 290.0
+margin_right = 376.0
 margin_bottom = 22.0
 custom_fonts/font = SubResource( 21 )
 text = "100"
 
 [node name="SubirVolum" type="Button" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenGeneral"]
-margin_left = 294.0
-margin_right = 314.0
+margin_left = 380.0
+margin_right = 400.0
 margin_bottom = 27.0
 custom_fonts/font = SubResource( 23 )
 text = "+"
@@ -280,18 +281,19 @@ nodo_sfx = NodePath("../../../../../../BotonSFX")
 margin_top = 282.0
 margin_right = 400.0
 margin_bottom = 309.0
-alignment = 1
+alignment = 2
 
 [node name="TextoVolumen" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenMusica"]
 margin_left = 101.0
 margin_right = 214.0
 margin_bottom = 27.0
+size_flags_horizontal = 6
 custom_fonts/font = SubResource( 11 )
 text = "MUSICA"
 
 [node name="BajarVolum" type="Button" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenMusica"]
-margin_left = 218.0
-margin_right = 238.0
+margin_left = 319.0
+margin_right = 339.0
 margin_bottom = 27.0
 custom_fonts/font = SubResource( 19 )
 text = "-"
@@ -299,16 +301,16 @@ script = ExtResource( 4 )
 nodo_sfx = NodePath("../../../../../../BotonSFX")
 
 [node name="NivelVolumen" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenMusica"]
-margin_left = 242.0
+margin_left = 343.0
 margin_top = 4.0
-margin_right = 275.0
+margin_right = 376.0
 margin_bottom = 22.0
 custom_fonts/font = SubResource( 21 )
 text = "100"
 
 [node name="SubirVolum" type="Button" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenMusica"]
-margin_left = 279.0
-margin_right = 299.0
+margin_left = 380.0
+margin_right = 400.0
 margin_bottom = 27.0
 custom_fonts/font = SubResource( 23 )
 text = "+"
@@ -322,18 +324,19 @@ nodo_sfx = NodePath("../../../../../../BotonSFX")
 margin_top = 313.0
 margin_right = 400.0
 margin_bottom = 340.0
-alignment = 1
+alignment = 2
 
 [node name="TextoVolumen" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenSFX"]
 margin_left = 127.0
 margin_right = 188.0
 margin_bottom = 27.0
+size_flags_horizontal = 6
 custom_fonts/font = SubResource( 11 )
 text = "SFX"
 
 [node name="BajarVolum" type="Button" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenSFX"]
-margin_left = 192.0
-margin_right = 212.0
+margin_left = 319.0
+margin_right = 339.0
 margin_bottom = 27.0
 custom_fonts/font = SubResource( 19 )
 text = "-"
@@ -341,16 +344,16 @@ script = ExtResource( 4 )
 nodo_sfx = NodePath("../../../../../../BotonSFX")
 
 [node name="NivelVolumen" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenSFX"]
-margin_left = 216.0
+margin_left = 343.0
 margin_top = 4.0
-margin_right = 249.0
+margin_right = 376.0
 margin_bottom = 22.0
 custom_fonts/font = SubResource( 21 )
 text = "100"
 
 [node name="SubirVolum" type="Button" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/VBoxContainer/VolumenSFX"]
-margin_left = 253.0
-margin_right = 273.0
+margin_left = 380.0
+margin_right = 400.0
 margin_bottom = 27.0
 custom_fonts/font = SubResource( 23 )
 text = "+"

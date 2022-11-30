@@ -103,6 +103,9 @@ func _on_OpcionResolucion_item_selected(indice: int) -> void:
 
 func _on_General_BajarVolum_pressed() -> void:
 	cambiar_volumen(bus_indices.Master,true)
+	var vol:float = AudioServer.get_bus_volume_db(bus_indices.Master)
+	if vol == -50.0:
+		mutear_todo()
 
 
 func _on_General_SubirVolum_pressed() -> void:
@@ -123,3 +126,9 @@ func _on_SFX_BajarVolum_pressed() -> void:
 
 func _on_SFX_SubirVolum_pressed() -> void:
 	cambiar_volumen(bus_indices.SFX,false)
+
+
+func mutear_todo() -> void:
+	AudioServer.set_bus_volume_db(bus_indices.Musica, -50.0)
+	AudioServer.set_bus_volume_db(bus_indices.SFX, -50.0)
+	#cargar_volumen_bus()

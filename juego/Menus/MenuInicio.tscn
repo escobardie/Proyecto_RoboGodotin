@@ -86,6 +86,7 @@ bus = "SFX"
 
 [node name="Musica" parent="." instance=ExtResource( 3 )]
 
+[connection signal="pressed" from="VBoxContainer/BotonCargar" to="." method="_on_BotonCargar_pressed"]
 [connection signal="pressed" from="VBoxContainer/BotonNuevo" to="." method="_on_BotonNuevo_pressed"]
 [connection signal="pressed" from="VBoxContainer/BotonOpciones" to="." method="_on_BotonOpciones_pressed"]
 [connection signal="pressed" from="VBoxContainer/BotonSalir" to="." method="_on_BotonSalir_pressed"]

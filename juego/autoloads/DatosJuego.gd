@@ -15,7 +15,9 @@ var puntaje_monedas:int = 0
 var nivel_actual:String = ""
 var num_nivel_actual:int = 0
 var nivel_proximo:String = ""
-
+######
+var juego_guardado:bool 
+######
 
 ## METODOS CUSTOM
 #metodo para restablecer los valores, esto pasara cuando estemos en la escena de GAMEOVER
@@ -39,6 +41,7 @@ func restar_vidas() -> void:
 	if vidas == 0:
 		#player.game_over()
 		Eventos.emit_signal("game_over")
+		############
 	Eventos.emit_signal("actualizar_hub")
 
 

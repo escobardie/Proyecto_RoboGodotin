@@ -6,18 +6,25 @@ extends Node
 ## ATRIBUTOS EXPORT
 export var numero_nivel:int = 0
 export(String, FILE, "*.tscn") var proximo_nivel= ""
-#export(String, FILE, "*.tscn") var menu_game_over = "res://juego/Menus/MenuFinalCreditos.tscn"
+export(String, FILE, "*.tscn") var menu_game_over = "res://juego/Menus/MenuFinalCreditos.tscn"
 
 onready var sfx_ambiente: AudioStreamPlayer = $Ambiente
+
+#var cargar: GuardarCargar = GuardarCargar.new()
 
 ## METODOS
 func _ready() -> void:
 	sfx_ambiente.play()
-# warning-ignore:return_value_discarded
-	#Eventos.connect("game_over",self, "_on_game_over")
+	Eventos.connect("game_over",self, "_on_game_over")
 	yield(get_tree().create_timer(0.4), "timeout")
 	actualizar_datos()
 
+func _process(_delta: float) -> void:
+	##########
+	var cargar: GuardarCargar = GuardarCargar.new()
+	#DatosJuego.juego_guardado = false
+	cargar.guardar_datos_juegos()
+	############
 
 #utilizamos esto para crear alertas propias(no olvida de colocar el "tool" al inicio del script
 func _get_configuration_warning() -> String:
@@ -35,8 +42,7 @@ func actualizar_datos() ->void:
 
 func _on_game_over() ->void:
 	print("entro al game over")
-	#get_tree().reload_current_scene()
-	#get_tree().change_scene(menu_game_over)
-	get_tree().quit()
+	get_tree().change_scene("res://juego/Menus/MenuAjustes.tscn")
+	#get_tree().quit()
 
 
