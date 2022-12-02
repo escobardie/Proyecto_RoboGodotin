@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://juego/Bloques/ColumnaBloques.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://juego/Niveles/Ambiente/ambiente pueblo otoño-estorninos.mp3" type="AudioStream" id=3]
+[ext_resource path="res://juego/Bloques/BloqueTierra.tscn" type="PackedScene" id=4]
 [ext_resource path="res://juego/interfaz/HUD.tscn" type="PackedScene" id=8]
 [ext_resource path="res://juego/Niveles/Nivel.gd" type="Script" id=9]
 [ext_resource path="res://juego/Niveles/Portal.tscn" type="PackedScene" id=10]
@@ -29,6 +30,9 @@ light_color = Color( 0.909804, 0.960784, 0.0196078, 1 )
 shadow_enabled = true
 
 [node name="Bordes" type="Spatial" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Norte" type="Spatial" parent="Bordes"]
 
@@ -659,6 +663,53 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.2, 25 )
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2, 0, 0 )
 
 [node name="ContenedorMonedas" type="Node" parent="."]
+
+[node name="ContenedorNumNivel" type="Node" parent="."]
+
+[node name="BloqueTierra" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.80916, 25.009 )
+
+[node name="BloqueTierra2" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4.80916, 25.006 )
+
+[node name="BloqueTierra3" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4.80916, 25.006 )
+
+[node name="BloqueTierra4" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.80916, 25.009 )
+
+[node name="BloqueTierra5" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5.80916, 25.006 )
+
+[node name="BloqueTierra6" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 5.80916, 25.006 )
+
+[node name="BloqueTierra7" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.80916, 25.009 )
+
+[node name="BloqueTierra8" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 6.80916, 25.006 )
+
+[node name="BloqueTierra9" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 6.80916, 25.006 )
+
+[node name="BloqueTierra10" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.80916, 25.009 )
+
+[node name="BloqueTierra11" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 7.80916, 25.006 )
+
+[node name="BloqueTierra12" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 7.80916, 25.006 )
+
+[node name="BloqueTierra13" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.80916, 25.009 )
+
+[node name="BloqueTierra15" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 8.80916, 25.006 )
+
+[node name="BloqueTierra16" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 8.80916, 25.006 )
 
 [node name="ContenedorObjetos" type="Node" parent="."]
 

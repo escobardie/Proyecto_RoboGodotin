@@ -3,9 +3,10 @@
 [ext_resource path="res://juego/Niveles/NivelBase.tscn" type="PackedScene" id=1]
 
 [sub_resource type="PlaneMesh" id=1]
+size = Vector2( 50, 50 )
 
 [sub_resource type="SpatialMaterial" id=2]
-albedo_color = Color( 0.392157, 0.988235, 0.972549, 1 )
+albedo_color = Color( 0.266667, 0.329412, 0.0235294, 1 )
 
 [node name="Nivel_Final" instance=ExtResource( 1 )]
 numero_nivel = 4
@@ -15,5 +16,23 @@ proximo_nivel = "res://juego/Menus/MenuInicio.tscn"
 mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
 
-[node name="Portal" parent="." index="8"]
+[node name="BloqueTierra2" parent="ContenedorNumNivel" index="1"]
+visible = false
+
+[node name="BloqueTierra3" parent="ContenedorNumNivel" index="2"]
+visible = false
+
+[node name="BloqueTierra5" parent="ContenedorNumNivel" index="4"]
+visible = false
+
+[node name="BloqueTierra6" parent="ContenedorNumNivel" index="5"]
+visible = false
+
+[node name="BloqueTierra11" parent="ContenedorNumNivel" index="10"]
+visible = false
+
+[node name="BloqueTierra15" parent="ContenedorNumNivel" index="13"]
+visible = false
+
+[node name="Portal" parent="." index="9"]
 proximo_nivel = "res://juego/Menus/MenuFinalCreditos.tscn"

@@ -18,9 +18,41 @@ proximo_nivel = "res://juego/Niveles/Nivel_2.tscn"
 mesh = SubResource( 2 )
 material/0 = null
 
+[node name="BloqueTierra2" parent="ContenedorNumNivel" index="1"]
+visible = false
+collision_layer = 0
+collision_mask = 0
+
+[node name="BloqueTierra3" parent="ContenedorNumNivel" index="2"]
+visible = false
+collision_layer = 0
+collision_mask = 0
+
+[node name="BloqueTierra5" parent="ContenedorNumNivel" index="4"]
+visible = false
+collision_layer = 0
+collision_mask = 0
+
+[node name="BloqueTierra6" parent="ContenedorNumNivel" index="5"]
+visible = false
+collision_layer = 0
+collision_mask = 0
+
+[node name="BloqueTierra8" parent="ContenedorNumNivel" index="7"]
+visible = false
+
+[node name="BloqueTierra9" parent="ContenedorNumNivel" index="8"]
+visible = false
+
+[node name="BloqueTierra11" parent="ContenedorNumNivel" index="10"]
+visible = false
+
+[node name="BloqueTierra16" parent="ContenedorNumNivel" index="14"]
+visible = false
+
 [node name="Sierra" parent="ContenedorObjetos" index="0" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.16439, 0.757456, 2.01284 )
 audio_bus_name = "SFX"
 
-[node name="Ambiente" parent="." index="9"]
+[node name="Ambiente" parent="." index="10"]
 stream = ExtResource( 3 )

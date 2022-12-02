@@ -22,7 +22,8 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	##########
 	var cargar: GuardarCargar = GuardarCargar.new()
-	#DatosJuego.juego_guardado = false
+	#guarda en todo momento los datos
+	#NO OLIVAR DE SACAR EL "#"
 	cargar.guardar_datos_juegos()
 	############
 

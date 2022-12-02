@@ -25,7 +25,7 @@ func _unhandled_input(_event: InputEvent) -> void:
 		texto_completo.visible = false
 		puede_iniciar = false
 		#opcional
-		queue_free()
+		#queue_free()
 
 
 
