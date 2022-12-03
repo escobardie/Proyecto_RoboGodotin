@@ -24,7 +24,7 @@ func _process(_delta: float) -> void:
 	var cargar: GuardarCargar = GuardarCargar.new()
 	#guarda en todo momento los datos
 	#NO OLIVAR DE SACAR EL "#"
-	cargar.guardar_datos_juegos()
+	#cargar.guardar_datos_juegos()
 	############
 
 #utilizamos esto para crear alertas propias(no olvida de colocar el "tool" al inicio del script
@@ -42,8 +42,8 @@ func actualizar_datos() ->void:
 	DatosJuego.nivel_proximo = proximo_nivel
 
 func _on_game_over() ->void:
-	print("entro al game over")
-	get_tree().change_scene("res://juego/Menus/MenuAjustes.tscn")
-	#get_tree().quit()
+	#queue_free()
+	#get_tree().change_scene("res://juego/Menus/MenuInicio.tscn")
+	get_tree().quit()
 
 

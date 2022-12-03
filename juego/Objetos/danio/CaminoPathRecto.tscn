@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://juego/Objetos/danio/PathFollow.gd" type="Script" id=1]
+[ext_resource path="res://juego/Objetos/danio/Sierra.tscn" type="PackedScene" id=2]
+
+[sub_resource type="Curve3D" id=1]
+_data = {
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -0.000676513, 0, 0.000676534, 0, 0, 0, 0, 0, 0, -4.97821, 0, -0.020271, 0, 0, 0, 0, 0, 0, -0.000676513, 0, 0.000676534 ),
+"tilts": PoolRealArray( 0, 0, 0 )
+}
+
+[node name="CaminoPath" type="Path"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
+curve = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PathFollow" type="PathFollow" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000676513, 0, 0.000676534 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sierra" parent="PathFollow" instance=ExtResource( 2 )]

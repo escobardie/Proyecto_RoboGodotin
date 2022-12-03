@@ -13,6 +13,9 @@ onready var texto_completo: Label = $TextoCompleto
 func _ready() -> void:
 	barra_progreso.visible  = false
 	texto_completo.visible  = false
+	##############
+	
+	#############
 
 func _unhandled_input(_event: InputEvent) -> void:
 	if puede_iniciar:
@@ -63,4 +66,5 @@ func carga_completa(recurso: Resource) -> void:
 	hilo.wait_to_finish()
 	escena_precargada = recurso.instance()
 	puede_iniciar = true
+
 

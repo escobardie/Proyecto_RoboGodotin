@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://juego/Objetos/danio/PathFollow.gd" type="Script" id=1]
+
+[sub_resource type="Curve3D" id=1]
+_data = {
+"points": PoolVector3Array(  ),
+"tilts": PoolRealArray(  )
+}
+
+[node name="CaminoPath" type="Path"]
+curve = SubResource( 1 )
+
+[node name="PathFollow" type="PathFollow" parent="."]
+script = ExtResource( 1 )

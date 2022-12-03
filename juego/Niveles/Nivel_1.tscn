@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://juego/Niveles/NivelBase.tscn" type="PackedScene" id=1]
-[ext_resource path="res://juego/Objetos/danio/Sierra.tscn" type="PackedScene" id=2]
+[ext_resource path="res://juego/Objetos/danio/CaminoPathRecto.tscn" type="PackedScene" id=2]
 [ext_resource path="res://juego/Niveles/Ambiente/ambiente de bosque por la mañana.mp3" type="AudioStream" id=3]
+[ext_resource path="res://juego/Objetos/danio/Sierra.tscn" type="PackedScene" id=4]
+[ext_resource path="res://juego/Bloques/BloqueGrande.tscn" type="PackedScene" id=5]
+[ext_resource path="res://juego/Bloques/BloqueLargo.tscn" type="PackedScene" id=7]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.00784314, 0.254902, 0.180392, 1 )
@@ -17,6 +20,30 @@ proximo_nivel = "res://juego/Niveles/Nivel_2.tscn"
 [node name="MeshInstance" parent="Suelo" index="0"]
 mesh = SubResource( 2 )
 material/0 = null
+
+[node name="BloqueGrande" parent="Plataformas" index="0" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.20481, 2.89607, 13.1586 )
+
+[node name="BloqueGrande2" parent="Plataformas" index="1" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.70068, 2.54528, 10.5978 )
+
+[node name="BloqueGrande3" parent="Plataformas" index="2" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.25243, 0.663966, 5.61166 )
+
+[node name="BloqueGrande4" parent="Plataformas" index="3" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.32815, 2.08979, 9.64638 )
+
+[node name="BloqueGrande5" parent="Plataformas" index="4" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.64222, 1.39254, 9.55664 )
+
+[node name="BloqueGrande6" parent="Plataformas" index="5" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.30309, 1.29549, 8.18262 )
+
+[node name="BloqueGrande7" parent="Plataformas" index="6" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16185, 3.23515, 16.1369 )
+
+[node name="BloqueLargo" parent="Plataformas" index="7" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.07763, 0, 3.63722 )
 
 [node name="BloqueTierra2" parent="ContenedorNumNivel" index="1"]
 visible = false
@@ -50,9 +77,20 @@ visible = false
 [node name="BloqueTierra16" parent="ContenedorNumNivel" index="14"]
 visible = false
 
-[node name="Sierra" parent="ContenedorObjetos" index="0" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.16439, 0.757456, 2.01284 )
-audio_bus_name = "SFX"
+[node name="CaminoPath" parent="ContenedorObjetos" index="0" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.81891, 4.64794, 8.656 )
+
+[node name="Sierra" parent="ContenedorObjetos" index="1" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.46601, 2.51608, 8.10998 )
+
+[node name="Sierra2" parent="ContenedorObjetos" index="2" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.46601, 2.51608, 9.01712 )
+
+[node name="Sierra3" parent="ContenedorObjetos" index="3" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.46601, 2.51608, 9.93931 )
+
+[node name="Portal" parent="." index="9"]
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 1.18173, 4.33321, 16.236 )
 
 [node name="Ambiente" parent="." index="10"]
 stream = ExtResource( 3 )
