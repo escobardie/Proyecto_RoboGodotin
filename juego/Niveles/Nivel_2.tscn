@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://juego/Niveles/NivelBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://juego/Objetos/danio/Sierra.tscn" type="PackedScene" id=2]
+[ext_resource path="res://juego/Objetos/danio/CaminoPathRecto.tscn" type="PackedScene" id=3]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 50, 50 )
@@ -15,6 +17,15 @@ proximo_nivel = "res://juego/Niveles/Nivel_3.tscn"
 [node name="MeshInstance" parent="Suelo" index="0"]
 mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
+
+[node name="Oeste" parent="Bordes" index="1"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -18, 0, 0 )
+
+[node name="Este" parent="Bordes" index="3"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18, 0, 0 )
+
+[node name="Player" parent="." index="5"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -20 )
 
 [node name="BloqueTierra4" parent="ContenedorNumNivel" index="3"]
 visible = false
@@ -33,3 +44,48 @@ visible = false
 
 [node name="BloqueTierra12" parent="ContenedorNumNivel" index="11"]
 visible = false
+
+[node name="Sierra" parent="ContenedorObjetos" index="0" instance=ExtResource( 2 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 5, 2.5, 0 )
+
+[node name="Sierra5" parent="ContenedorObjetos" index="1" instance=ExtResource( 2 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 2.5, 0 )
+
+[node name="Sierra6" parent="ContenedorObjetos" index="2" instance=ExtResource( 2 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -5, 2.5, 0 )
+
+[node name="Sierra2" parent="ContenedorObjetos" index="3" instance=ExtResource( 2 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -5, 2.5, -9.5 )
+
+[node name="Sierra3" parent="ContenedorObjetos" index="4" instance=ExtResource( 2 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 2.5, -9.5 )
+
+[node name="Sierra4" parent="ContenedorObjetos" index="5" instance=ExtResource( 2 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 5, 2.5, -9.5 )
+
+[node name="CaminoPath" parent="ContenedorObjetos" index="6" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 12, 2, 12 )
+
+[node name="CaminoPath7" parent="ContenedorObjetos" index="7" instance=ExtResource( 3 )]
+transform = Transform( -5, 0, -4.37114e-07, 0, 5, 0, 4.37114e-07, 0, -5, -10.5, 2, -4 )
+
+[node name="CaminoPath3" parent="ContenedorObjetos" index="8" instance=ExtResource( 3 )]
+transform = Transform( -4.33013, 0, 2.5, 0, 5, 0, -2.5, 0, -4.33013, -12.5, 2, 5.5 )
+
+[node name="CaminoPath5" parent="ContenedorObjetos" index="9" instance=ExtResource( 3 )]
+transform = Transform( -4.33013, 0, 2.5, 0, 5, 0, -2.5, 0, -4.33013, -12.5, 2, -18.5 )
+
+[node name="CaminoPath4" parent="ContenedorObjetos" index="10" instance=ExtResource( 3 )]
+transform = Transform( -5, 0, -4.37114e-07, 0, 5, 0, 4.37114e-07, 0, -5, -11, 2, 19 )
+
+[node name="CaminoPath8" parent="ContenedorObjetos" index="11" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 8.74228e-07, 0, 5, 0, -8.74228e-07, 0, 5, 11, 2, 17.5 )
+
+[node name="CaminoPath2" parent="ContenedorObjetos" index="12" instance=ExtResource( 3 )]
+transform = Transform( 4.33013, 0, 2.5, 0, 5, 0, -2.5, 0, 4.33013, 12, 2, -14.5 )
+
+[node name="CaminoPath6" parent="ContenedorObjetos" index="13" instance=ExtResource( 3 )]
+transform = Transform( 4.33013, 0, 2.5, 0, 5, 0, -2.5, 0, 4.33013, 12, 2, 1.5 )
+
+[node name="Portal" parent="." index="9"]
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 20.5 )

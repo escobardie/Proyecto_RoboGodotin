@@ -79,7 +79,7 @@ tracks/1/keys = {
 }
 
 [node name="Sierra" type="Area"]
-collision_layer = 2
+collision_layer = 0
 script = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]

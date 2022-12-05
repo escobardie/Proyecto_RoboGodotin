@@ -18,6 +18,7 @@ numero_nivel = 1
 [node name="HUD" parent="." instance=ExtResource( 8 )]
 
 [node name="Suelo" type="StaticBody" parent="."]
+collision_layer = 0
 
 [node name="MeshInstance" type="MeshInstance" parent="Suelo"]
 
@@ -667,49 +668,49 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2, 0, 0 )
 [node name="ContenedorNumNivel" type="Node" parent="."]
 
 [node name="BloqueTierra" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.80916, 25.009 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00118, 4.80916, 25.009 )
 
 [node name="BloqueTierra2" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4.80916, 25.006 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00117803, 4.80916, 25.006 )
 
 [node name="BloqueTierra3" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4.80916, 25.006 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.998822, 4.80916, 25.006 )
 
 [node name="BloqueTierra4" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.80916, 25.009 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00118, 5.80916, 25.009 )
 
 [node name="BloqueTierra5" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5.80916, 25.006 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00117803, 5.80916, 25.006 )
 
 [node name="BloqueTierra6" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 5.80916, 25.006 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.998822, 5.80916, 25.006 )
 
 [node name="BloqueTierra7" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.80916, 25.009 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00118, 6.80916, 25.009 )
 
 [node name="BloqueTierra8" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 6.80916, 25.006 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00117803, 6.80916, 25.006 )
 
 [node name="BloqueTierra9" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 6.80916, 25.006 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.998822, 6.80916, 25.006 )
 
 [node name="BloqueTierra10" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.80916, 25.009 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00118, 7.80916, 25.009 )
 
 [node name="BloqueTierra11" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 7.80916, 25.006 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00117803, 7.80916, 25.006 )
 
 [node name="BloqueTierra12" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 7.80916, 25.006 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.998822, 7.80916, 25.006 )
 
 [node name="BloqueTierra13" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.80916, 25.009 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00118, 8.80916, 25.009 )
 
 [node name="BloqueTierra15" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 8.80916, 25.006 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00117803, 8.80916, 25.006 )
 
 [node name="BloqueTierra16" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 8.80916, 25.006 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.998822, 8.80916, 25.006 )
 
 [node name="ContenedorObjetos" type="Node" parent="."]
 

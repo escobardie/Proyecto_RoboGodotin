@@ -8,6 +8,7 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node) -> void:
 	var player: Godotin = body
-	player.respawn()
+	if body == player:
+		player.respawn()
 	#if body is Godotin:
 	#	body.respawn()

@@ -1,0 +1,108 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://juego/Niveles/Portal.tscn" type="PackedScene" id=1]
+[ext_resource path="res://juego/interfaz/HUD.tscn" type="PackedScene" id=2]
+[ext_resource path="res://juego/player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://juego/Bloques/BloqueTierra.tscn" type="PackedScene" id=4]
+[ext_resource path="res://juego/Niveles/Nivel.gd" type="Script" id=5]
+[ext_resource path="res://juego/Niveles/Ambiente/ambiente pueblo otoño-estorninos.mp3" type="AudioStream" id=6]
+
+[sub_resource type="PlaneMesh" id=1]
+size = Vector2( 50, 50 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.266667, 0.329412, 0.0235294, 1 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 25, 0.001, 25 )
+
+[node name="Nivel_Final" type="Node"]
+script = ExtResource( 5 )
+numero_nivel = 4
+proximo_nivel = "res://juego/Menus/MenuInicio.tscn"
+
+[node name="HUD" parent="." instance=ExtResource( 2 )]
+
+[node name="Suelo" type="StaticBody" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="Suelo"]
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Suelo"]
+shape = SubResource( 3 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.830975, 0.473259, 0.292416, 0, -0.525635, 0.85071, 0.55631, -0.706919, -0.436789, 23.3293, 14.2091, -23.9402 )
+light_color = Color( 0.909804, 0.960784, 0.0196078, 1 )
+shadow_enabled = true
+
+[node name="Plataformas" type="Spatial" parent="."]
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2, 0, 0 )
+
+[node name="ContenedorMonedas" type="Node" parent="."]
+
+[node name="ContenedorNumNivel" type="Node" parent="."]
+
+[node name="BloqueTierra" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00118, 4.80916, 25.009 )
+
+[node name="BloqueTierra2" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00117803, 4.80916, 25.006 )
+visible = false
+
+[node name="BloqueTierra3" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.998822, 4.80916, 25.006 )
+visible = false
+
+[node name="BloqueTierra4" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00118, 5.80916, 25.009 )
+
+[node name="BloqueTierra5" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00117803, 5.80916, 25.006 )
+visible = false
+
+[node name="BloqueTierra6" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.998822, 5.80916, 25.006 )
+visible = false
+
+[node name="BloqueTierra7" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00118, 6.80916, 25.009 )
+
+[node name="BloqueTierra8" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00117803, 6.80916, 25.006 )
+
+[node name="BloqueTierra9" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.998822, 6.80916, 25.006 )
+
+[node name="BloqueTierra10" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00118, 7.80916, 25.009 )
+
+[node name="BloqueTierra11" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00117803, 7.80916, 25.006 )
+visible = false
+
+[node name="BloqueTierra12" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.998822, 7.80916, 25.006 )
+
+[node name="BloqueTierra13" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00118, 8.80916, 25.009 )
+
+[node name="BloqueTierra15" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00117803, 8.80916, 25.006 )
+visible = false
+
+[node name="BloqueTierra16" parent="ContenedorNumNivel" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.998822, 8.80916, 25.006 )
+
+[node name="ContenedorObjetos" type="Node" parent="."]
+
+[node name="Portal" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 1.86961, 0, 5.55161 )
+proximo_nivel = "res://juego/Menus/MenuFinalCreditos.tscn"
+
+[node name="Ambiente" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+bus = "SFX"

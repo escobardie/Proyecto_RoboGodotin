@@ -16,7 +16,7 @@ export var fuerza_salto:float = 18.0
 
 
 ## ATRIBUTOS ONREDY
-onready var brazo_camara:SpringArm = $BrazoCamara
+onready var brazo_camara:SpringArm = $Position3D/BrazoCamara#$Position3D/BrazoCamara
 onready var armadura:Spatial = $Armadura
 onready var arbol_animacion: ArbolAnimacionPlayer = $ArbolAnimacion
 onready var linterna: SpotLight = $Linterna
@@ -32,6 +32,7 @@ var disparado:bool = false
 
 ## METODOS
 func _ready() -> void:
+	#$Spatial/BrazoCamara.translation
 	#Eventos.connect("game_over",self, "game_over")
 	pass
 
@@ -46,6 +47,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		linterna.light_energy = 0
 
 func _process(_delta: float) -> void:
+	#brazo_camara
+	#brazo_camara.translation = Vector3(0.0, 2.0, 0.0)
 	brazo_camara.translation = translation
 
 func _physics_process(_delta: float) -> void:
@@ -129,15 +132,6 @@ func tomar_direccion() -> Vector3:
 
 func respawn() -> void:
 	DatosJuego.restar_vidas()
-	get_tree().reload_current_scene()
-
-#func game_over() ->void:
-	#get_tree().change_scene_to(menu_game_over)
-#	print("entro GODOTIN al game over")
-	#get_tree().reload_current_scene()
-#	Eventos.emit_signal("game_over")
-# warning-ignore:return_value_discarded
-	#get_tree().change_scene("res://juego/Menus/MenuFinalCreditos.tscn")
-	#get_tree().quit()
-	#get_tree().change_scene(menu_game_over)
+	if DatosJuego.vidas >0:
+		get_tree().reload_current_scene()
 

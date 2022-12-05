@@ -5,6 +5,11 @@ var hilo:Thread = null
 var puede_iniciar: bool = false
 var escena_precargada: Node = null
 
+######
+
+######
+
+
 onready var barra_progreso: ProgressBar = $ProgressBar
 onready var texto_completo: Label = $TextoCompleto
 
@@ -13,9 +18,7 @@ onready var texto_completo: Label = $TextoCompleto
 func _ready() -> void:
 	barra_progreso.visible  = false
 	texto_completo.visible  = false
-	##############
-	
-	#############
+
 
 func _unhandled_input(_event: InputEvent) -> void:
 	if puede_iniciar:
@@ -64,6 +67,9 @@ func cargar_hilo(nivel: String) -> void:
 func carga_completa(recurso: Resource) -> void:
 	texto_completo.visible = true
 	hilo.wait_to_finish()
+	##############
+
+	#############
 	escena_precargada = recurso.instance()
 	puede_iniciar = true
 

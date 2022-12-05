@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://juego/Niveles/NivelBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://juego/Bloques/ParedX5.tscn" type="PackedScene" id=2]
+[ext_resource path="res://juego/Bloques/ColumnaBloques.tscn" type="PackedScene" id=3]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 50, 50 )
@@ -16,6 +18,325 @@ proximo_nivel = "res://juego/Niveles/Nivel_Final.tscn"
 mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
 
+[node name="Laberinto" type="Spatial" parent="." index="4"]
+
+[node name="Muro" type="Spatial" parent="Laberinto" index="0"]
+
+[node name="ParedX5_1" parent="Laberinto/Muro" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, -18 )
+
+[node name="ParedX5_2" parent="Laberinto/Muro" index="1" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -18 )
+
+[node name="ParedX5_3" parent="Laberinto/Muro" index="2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, -18 )
+
+[node name="ParedX5_4" parent="Laberinto/Muro" index="3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -18 )
+
+[node name="ParedX5_5" parent="Laberinto/Muro" index="4" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -18 )
+
+[node name="ParedX5_6" parent="Laberinto/Muro" index="5" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -18 )
+
+[node name="ParedX5_7" parent="Laberinto/Muro" index="6" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -18 )
+
+[node name="ParedX5_8" parent="Laberinto/Muro" index="7" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -18 )
+
+[node name="ParedX5_9" parent="Laberinto/Muro" index="8" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -18 )
+
+[node name="Muro5" type="Spatial" parent="Laberinto" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20.8007 )
+
+[node name="ParedX5_1" parent="Laberinto/Muro5" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, -13.7033 )
+
+[node name="ParedX5_2" parent="Laberinto/Muro5" index="1" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.31, 0, -17.2045 )
+
+[node name="ParedX5_3" parent="Laberinto/Muro5" index="2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.3681, 0, -20.5672 )
+
+[node name="ParedX5_4" parent="Laberinto/Muro5" index="3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1423, 0, -13.2866 )
+
+[node name="ParedX5_5" parent="Laberinto/Muro5" index="4" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.96788, 0, -14.8129 )
+
+[node name="ParedX5_6" parent="Laberinto/Muro5" index="5" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -14.8115 )
+
+[node name="ParedX5_7" parent="Laberinto/Muro5" index="6" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -18 )
+
+[node name="ParedX5_8" parent="Laberinto/Muro5" index="7" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -18 )
+
+[node name="ParedX5_9" parent="Laberinto/Muro5" index="8" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -18 )
+
+[node name="Muro6" type="Spatial" parent="Laberinto" index="2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 29 )
+
+[node name="ParedX5_1" parent="Laberinto/Muro6" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.8899, 0, -18.5726 )
+
+[node name="ParedX5_2" parent="Laberinto/Muro6" index="1" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.18369, 0, -8.0056 )
+
+[node name="ParedX5_3" parent="Laberinto/Muro6" index="2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.0839, 0, -17.8757 )
+
+[node name="ParedX5_4" parent="Laberinto/Muro6" index="3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.07065, 0, -15.3049 )
+
+[node name="ParedX5_5" parent="Laberinto/Muro6" index="4" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03319, 0, -15.3243 )
+
+[node name="ParedX5_6" parent="Laberinto/Muro6" index="5" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.93657, 0, -17.4006 )
+
+[node name="ParedX5_7" parent="Laberinto/Muro6" index="6" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.92507, 0, -17.4006 )
+
+[node name="ParedX5_8" parent="Laberinto/Muro6" index="7" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15, 0, -15 )
+
+[node name="ParedX5_9" parent="Laberinto/Muro6" index="8" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -18 )
+
+[node name="Muro2" type="Spatial" parent="Laberinto" index="3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 6.144 )
+
+[node name="ParedX5_1" parent="Laberinto/Muro2" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, -20 )
+
+[node name="ParedX5_2" parent="Laberinto/Muro2" index="1" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -15.9 )
+
+[node name="ParedX5_3" parent="Laberinto/Muro2" index="2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, -15.9 )
+
+[node name="ParedX5_10" parent="Laberinto/Muro2" index="3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4832, 0, -15.9 )
+
+[node name="ParedX5_4" parent="Laberinto/Muro2" index="4" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.18625, 0, -3.16716 )
+
+[node name="ParedX5_5" parent="Laberinto/Muro2" index="5" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, -22 )
+
+[node name="ParedX5_6" parent="Laberinto/Muro2" index="6" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -17 )
+
+[node name="ParedX5_7" parent="Laberinto/Muro2" index="7" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -17 )
+
+[node name="ParedX5_8" parent="Laberinto/Muro2" index="8" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.0088, 0, 0.654209 )
+
+[node name="ParedX5_9" parent="Laberinto/Muro2" index="9" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -19 )
+
+[node name="Muro3" type="Spatial" parent="Laberinto" index="4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.1029 )
+
+[node name="ParedX5_1" parent="Laberinto/Muro3" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, -18.1 )
+
+[node name="ParedX5_2" parent="Laberinto/Muro3" index="1" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1927, 0, -13.8781 )
+
+[node name="ParedX5_3" parent="Laberinto/Muro3" index="2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.041, 0, -18 )
+
+[node name="ParedX5_4" parent="Laberinto/Muro3" index="3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, -18 )
+
+[node name="ParedX5_5" parent="Laberinto/Muro3" index="4" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.16162, 0, -13.1077 )
+
+[node name="ParedX5_6" parent="Laberinto/Muro3" index="5" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -18.1163 )
+
+[node name="ParedX5_7" parent="Laberinto/Muro3" index="6" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10, 0, -16 )
+
+[node name="ParedX5_8" parent="Laberinto/Muro3" index="7" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -18 )
+
+[node name="ParedX5_9" parent="Laberinto/Muro3" index="8" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -18 )
+
+[node name="Muro4" type="Spatial" parent="Laberinto" index="5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 35.8462 )
+
+[node name="ParedX5_1" parent="Laberinto/Muro4" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.8876, 0, -20.3746 )
+
+[node name="ParedX5_2" parent="Laberinto/Muro4" index="1" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9325, 0, -16.8895 )
+
+[node name="ParedX5_3" parent="Laberinto/Muro4" index="2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.8908, 0, -16.8808 )
+
+[node name="ParedX5_4" parent="Laberinto/Muro4" index="3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.62488, 0, -18.8421 )
+
+[node name="ParedX5_5" parent="Laberinto/Muro4" index="4" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.696699, 1.52588e-05, -14.8467 )
+
+[node name="ParedX5_6" parent="Laberinto/Muro4" index="5" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -15 )
+
+[node name="ParedX5_7" parent="Laberinto/Muro4" index="6" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8961, 0, -18.3372 )
+
+[node name="ParedX5_8" parent="Laberinto/Muro4" index="7" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 13.8991, 0, -21.2218 )
+
+[node name="ParedX5_9" parent="Laberinto/Muro4" index="8" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -14.8603 )
+
+[node name="Muro_1" type="Spatial" parent="Laberinto" index="6"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 2 )
+
+[node name="ParedX5_1" parent="Laberinto/Muro_1" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, -16.4468 )
+
+[node name="ParedX5_2" parent="Laberinto/Muro_1" index="1" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.868, 0, -14.9456 )
+
+[node name="ParedX5_3" parent="Laberinto/Muro_1" index="2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4253, 0, -19.8929 )
+
+[node name="ParedX5_4" parent="Laberinto/Muro_1" index="3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.02597, 0, -0.0966819 )
+
+[node name="ParedX5_5" parent="Laberinto/Muro_1" index="4" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.09826, 0, -19.0181 )
+
+[node name="ParedX5_6" parent="Laberinto/Muro_1" index="5" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4271, 0, -19.0163 )
+
+[node name="ParedX5_7" parent="Laberinto/Muro_1" index="6" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.92937, 0, -14.1397 )
+
+[node name="ParedX5_8" parent="Laberinto/Muro_1" index="7" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.8173, 0, -20.5784 )
+
+[node name="ParedX5_10" parent="Laberinto/Muro_1" index="8" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7167, 0, -20.5784 )
+
+[node name="ParedX5_9" parent="Laberinto/Muro_1" index="9" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8, 0, -13 )
+
+[node name="Muro_2" type="Spatial" parent="Laberinto" index="7"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 37, 0, 2 )
+
+[node name="ParedX5_1" parent="Laberinto/Muro_2" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -37 )
+
+[node name="ParedX5_2" parent="Laberinto/Muro_2" index="1" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8483, 0, -41.0045 )
+
+[node name="ParedX5_3" parent="Laberinto/Muro_2" index="2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, -18 )
+
+[node name="ParedX5_4" parent="Laberinto/Muro_2" index="3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -18 )
+
+[node name="ParedX5_5" parent="Laberinto/Muro_2" index="4" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -17 )
+
+[node name="ParedX5_6" parent="Laberinto/Muro_2" index="5" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -22 )
+
+[node name="ParedX5_7" parent="Laberinto/Muro_2" index="6" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10, 0, -20 )
+
+[node name="ParedX5_8" parent="Laberinto/Muro_2" index="7" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -18 )
+
+[node name="ParedX5_9" parent="Laberinto/Muro_2" index="8" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -18 )
+
+[node name="Muro_3" type="Spatial" parent="Laberinto" index="8"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.83318, 0, 2 )
+
+[node name="ParedX5_1" parent="Laberinto/Muro_3" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9523, 0, -19.7886 )
+
+[node name="ParedX5_2" parent="Laberinto/Muro_3" index="1" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1243, 0, -16.9124 )
+
+[node name="ParedX5_3" parent="Laberinto/Muro_3" index="2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.6824, 0, -12.8706 )
+
+[node name="ParedX5_4" parent="Laberinto/Muro_3" index="3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0719, 0, -12.8865 )
+
+[node name="ParedX5_5" parent="Laberinto/Muro_3" index="4" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.42225, 0, -24.0554 )
+
+[node name="ParedX5_6" parent="Laberinto/Muro_3" index="5" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.40653, 0, -19.0566 )
+
+[node name="ParedX5_7" parent="Laberinto/Muro_3" index="6" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.37388, 0, -13.6947 )
+
+[node name="ParedX5_8" parent="Laberinto/Muro_3" index="7" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -14 )
+
+[node name="ParedX5_9" parent="Laberinto/Muro_3" index="8" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -18 )
+
+[node name="ParedX5_10" parent="Laberinto/Muro_3" index="9" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.77347, 0, -18 )
+
+[node name="ParedX5_11" parent="Laberinto/Muro_3" index="10" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.81894, 0, -18 )
+
+[node name="Muro_4" type="Spatial" parent="Laberinto" index="9"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.9351, 0, 2 )
+
+[node name="ParedX5_1" parent="Laberinto/Muro_4" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.9525, 0, -17.9302 )
+
+[node name="ParedX5_2" parent="Laberinto/Muro_4" index="1" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5586, 0, -18 )
+
+[node name="ParedX5_3" parent="Laberinto/Muro_4" index="2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, -21.2122 )
+
+[node name="ParedX5_4" parent="Laberinto/Muro_4" index="3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -18 )
+
+[node name="ParedX5_5" parent="Laberinto/Muro_4" index="4" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -18 )
+
+[node name="ParedX5_6" parent="Laberinto/Muro_4" index="5" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -18 )
+
+[node name="ParedX5_7" parent="Laberinto/Muro_4" index="6" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -18 )
+
+[node name="ParedX5_8" parent="Laberinto/Muro_4" index="7" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.86642, 0, -13.9332 )
+
+[node name="ParedX5_9" parent="Laberinto/Muro_4" index="8" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -18 )
+
+[node name="ColumnaBloques" parent="Laberinto" index="10" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 6 )
+
+[node name="Player" parent="." index="6"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -17.7706, 0, -21.6872 )
+
 [node name="BloqueTierra5" parent="ContenedorNumNivel" index="4"]
 visible = false
 
@@ -30,3 +351,6 @@ visible = false
 
 [node name="BloqueTierra12" parent="ContenedorNumNivel" index="11"]
 visible = false
+
+[node name="Portal" parent="." index="10"]
+transform = Transform( -1.5, 0, -1.31134e-07, 0, 1.5, 0, 1.31134e-07, 0, -1.5, 3.27865, 0, 7.75471 )

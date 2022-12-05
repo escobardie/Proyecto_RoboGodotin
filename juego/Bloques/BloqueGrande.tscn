@@ -34,7 +34,7 @@ surfaces/1 = {
 extents = Vector3( 1, 0.5, 1 )
 
 [node name="BloqueGrande" type="StaticBody"]
-collision_layer = 2
+collision_layer = 4
 
 [node name="tmpParent" type="Spatial" parent="."]
 

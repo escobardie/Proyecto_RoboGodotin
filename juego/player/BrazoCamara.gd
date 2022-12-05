@@ -16,6 +16,8 @@ var c:= 0
 func _ready() -> void:
 	#evitamos que se modifiquen sus propiedades de escala, rotación y traslación
 	set_as_toplevel(true)
+	###############
+	###############
 	#controlamos la rotacion de la camara conrespecto al movimiento del mouse
 	velocidad_mov_camara *= chequear_camara_invertida()
 	

@@ -12,7 +12,7 @@ albedo_color = Color( 0.00784314, 0.254902, 0.180392, 1 )
 
 [sub_resource type="PlaneMesh" id=2]
 material = SubResource( 1 )
-size = Vector2( 50, 50 )
+size = Vector2( 20, 20 )
 
 [node name="Nivel_1" instance=ExtResource( 1 )]
 proximo_nivel = "res://juego/Niveles/Nivel_2.tscn"
@@ -20,6 +20,393 @@ proximo_nivel = "res://juego/Niveles/Nivel_2.tscn"
 [node name="MeshInstance" parent="Suelo" index="0"]
 mesh = SubResource( 2 )
 material/0 = null
+
+[node name="Norte" parent="Bordes" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15 )
+
+[node name="ColumnaBloques11" parent="Bordes/Norte" index="10"]
+visible = false
+
+[node name="ColumnaBloques12" parent="Bordes/Norte" index="11"]
+visible = false
+
+[node name="ColumnaBloques13" parent="Bordes/Norte" index="12"]
+visible = false
+
+[node name="ColumnaBloques14" parent="Bordes/Norte" index="13"]
+visible = false
+
+[node name="ColumnaBloques15" parent="Bordes/Norte" index="14"]
+visible = false
+
+[node name="ColumnaBloques16" parent="Bordes/Norte" index="15"]
+visible = false
+
+[node name="ColumnaBloques17" parent="Bordes/Norte" index="16"]
+visible = false
+
+[node name="ColumnaBloques18" parent="Bordes/Norte" index="17"]
+visible = false
+
+[node name="ColumnaBloques19" parent="Bordes/Norte" index="18"]
+visible = false
+
+[node name="ColumnaBloques20" parent="Bordes/Norte" index="19"]
+visible = false
+
+[node name="ColumnaBloques21" parent="Bordes/Norte" index="20"]
+visible = false
+
+[node name="ColumnaBloques22" parent="Bordes/Norte" index="21"]
+visible = false
+
+[node name="ColumnaBloques23" parent="Bordes/Norte" index="22"]
+visible = false
+
+[node name="ColumnaBloques24" parent="Bordes/Norte" index="23"]
+visible = false
+
+[node name="ColumnaBloques25" parent="Bordes/Norte" index="24"]
+visible = false
+
+[node name="ColumnaBloques51" parent="Bordes/Norte" index="25"]
+visible = false
+
+[node name="ColumnaBloques26" parent="Bordes/Norte" index="26"]
+visible = false
+
+[node name="ColumnaBloques27" parent="Bordes/Norte" index="27"]
+visible = false
+
+[node name="ColumnaBloques28" parent="Bordes/Norte" index="28"]
+visible = false
+
+[node name="ColumnaBloques29" parent="Bordes/Norte" index="29"]
+visible = false
+
+[node name="ColumnaBloques30" parent="Bordes/Norte" index="30"]
+visible = false
+
+[node name="ColumnaBloques31" parent="Bordes/Norte" index="31"]
+visible = false
+
+[node name="ColumnaBloques32" parent="Bordes/Norte" index="32"]
+visible = false
+
+[node name="ColumnaBloques33" parent="Bordes/Norte" index="33"]
+visible = false
+
+[node name="ColumnaBloques34" parent="Bordes/Norte" index="34"]
+visible = false
+
+[node name="ColumnaBloques35" parent="Bordes/Norte" index="35"]
+visible = false
+
+[node name="ColumnaBloques36" parent="Bordes/Norte" index="36"]
+visible = false
+
+[node name="ColumnaBloques37" parent="Bordes/Norte" index="37"]
+visible = false
+
+[node name="ColumnaBloques38" parent="Bordes/Norte" index="38"]
+visible = false
+
+[node name="ColumnaBloques39" parent="Bordes/Norte" index="39"]
+visible = false
+
+[node name="ColumnaBloques40" parent="Bordes/Norte" index="40"]
+visible = false
+
+[node name="ColumnaBloques41" parent="Bordes/Norte" index="41"]
+visible = false
+
+[node name="Oeste" parent="Bordes" index="1"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -16, 0, 0 )
+
+[node name="ColumnaBloques12" parent="Bordes/Oeste" index="11"]
+visible = false
+
+[node name="ColumnaBloques13" parent="Bordes/Oeste" index="12"]
+visible = false
+
+[node name="ColumnaBloques14" parent="Bordes/Oeste" index="13"]
+visible = false
+
+[node name="ColumnaBloques15" parent="Bordes/Oeste" index="14"]
+visible = false
+
+[node name="ColumnaBloques16" parent="Bordes/Oeste" index="15"]
+visible = false
+
+[node name="ColumnaBloques17" parent="Bordes/Oeste" index="16"]
+visible = false
+
+[node name="ColumnaBloques18" parent="Bordes/Oeste" index="17"]
+visible = false
+
+[node name="ColumnaBloques19" parent="Bordes/Oeste" index="18"]
+visible = false
+
+[node name="ColumnaBloques20" parent="Bordes/Oeste" index="19"]
+visible = false
+
+[node name="ColumnaBloques21" parent="Bordes/Oeste" index="20"]
+visible = false
+
+[node name="ColumnaBloques22" parent="Bordes/Oeste" index="21"]
+visible = false
+
+[node name="ColumnaBloques23" parent="Bordes/Oeste" index="22"]
+visible = false
+
+[node name="ColumnaBloques24" parent="Bordes/Oeste" index="23"]
+visible = false
+
+[node name="ColumnaBloques25" parent="Bordes/Oeste" index="24"]
+visible = false
+
+[node name="ColumnaBloques51" parent="Bordes/Oeste" index="25"]
+visible = false
+
+[node name="ColumnaBloques26" parent="Bordes/Oeste" index="26"]
+visible = false
+
+[node name="ColumnaBloques27" parent="Bordes/Oeste" index="27"]
+visible = false
+
+[node name="ColumnaBloques28" parent="Bordes/Oeste" index="28"]
+visible = false
+
+[node name="ColumnaBloques29" parent="Bordes/Oeste" index="29"]
+visible = false
+
+[node name="ColumnaBloques30" parent="Bordes/Oeste" index="30"]
+visible = false
+
+[node name="ColumnaBloques31" parent="Bordes/Oeste" index="31"]
+visible = false
+
+[node name="ColumnaBloques32" parent="Bordes/Oeste" index="32"]
+visible = false
+
+[node name="ColumnaBloques33" parent="Bordes/Oeste" index="33"]
+visible = false
+
+[node name="ColumnaBloques34" parent="Bordes/Oeste" index="34"]
+visible = false
+
+[node name="ColumnaBloques35" parent="Bordes/Oeste" index="35"]
+visible = false
+
+[node name="ColumnaBloques36" parent="Bordes/Oeste" index="36"]
+visible = false
+
+[node name="ColumnaBloques37" parent="Bordes/Oeste" index="37"]
+visible = false
+
+[node name="ColumnaBloques38" parent="Bordes/Oeste" index="38"]
+visible = false
+
+[node name="ColumnaBloques39" parent="Bordes/Oeste" index="39"]
+visible = false
+
+[node name="ColumnaBloques40" parent="Bordes/Oeste" index="40"]
+visible = false
+
+[node name="Sur" parent="Bordes" index="2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -35 )
+
+[node name="ColumnaBloques11" parent="Bordes/Sur" index="10"]
+visible = false
+
+[node name="ColumnaBloques12" parent="Bordes/Sur" index="11"]
+visible = false
+
+[node name="ColumnaBloques13" parent="Bordes/Sur" index="12"]
+visible = false
+
+[node name="ColumnaBloques14" parent="Bordes/Sur" index="13"]
+visible = false
+
+[node name="ColumnaBloques15" parent="Bordes/Sur" index="14"]
+visible = false
+
+[node name="ColumnaBloques16" parent="Bordes/Sur" index="15"]
+visible = false
+
+[node name="ColumnaBloques17" parent="Bordes/Sur" index="16"]
+visible = false
+
+[node name="ColumnaBloques18" parent="Bordes/Sur" index="17"]
+visible = false
+
+[node name="ColumnaBloques19" parent="Bordes/Sur" index="18"]
+visible = false
+
+[node name="ColumnaBloques20" parent="Bordes/Sur" index="19"]
+visible = false
+
+[node name="ColumnaBloques21" parent="Bordes/Sur" index="20"]
+visible = false
+
+[node name="ColumnaBloques22" parent="Bordes/Sur" index="21"]
+visible = false
+
+[node name="ColumnaBloques23" parent="Bordes/Sur" index="22"]
+visible = false
+
+[node name="ColumnaBloques24" parent="Bordes/Sur" index="23"]
+visible = false
+
+[node name="ColumnaBloques25" parent="Bordes/Sur" index="24"]
+visible = false
+
+[node name="ColumnaBloques51" parent="Bordes/Sur" index="25"]
+visible = false
+
+[node name="ColumnaBloques26" parent="Bordes/Sur" index="26"]
+visible = false
+
+[node name="ColumnaBloques27" parent="Bordes/Sur" index="27"]
+visible = false
+
+[node name="ColumnaBloques28" parent="Bordes/Sur" index="28"]
+visible = false
+
+[node name="ColumnaBloques29" parent="Bordes/Sur" index="29"]
+visible = false
+
+[node name="ColumnaBloques30" parent="Bordes/Sur" index="30"]
+visible = false
+
+[node name="ColumnaBloques31" parent="Bordes/Sur" index="31"]
+visible = false
+
+[node name="ColumnaBloques32" parent="Bordes/Sur" index="32"]
+visible = false
+
+[node name="ColumnaBloques33" parent="Bordes/Sur" index="33"]
+visible = false
+
+[node name="ColumnaBloques34" parent="Bordes/Sur" index="34"]
+visible = false
+
+[node name="ColumnaBloques35" parent="Bordes/Sur" index="35"]
+visible = false
+
+[node name="ColumnaBloques36" parent="Bordes/Sur" index="36"]
+visible = false
+
+[node name="ColumnaBloques37" parent="Bordes/Sur" index="37"]
+visible = false
+
+[node name="ColumnaBloques38" parent="Bordes/Sur" index="38"]
+visible = false
+
+[node name="ColumnaBloques39" parent="Bordes/Sur" index="39"]
+visible = false
+
+[node name="ColumnaBloques40" parent="Bordes/Sur" index="40"]
+visible = false
+
+[node name="ColumnaBloques41" parent="Bordes/Sur" index="41"]
+visible = false
+
+[node name="Este" parent="Bordes" index="3"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16, 0, 0 )
+
+[node name="ColumnaBloques12" parent="Bordes/Este" index="11"]
+visible = false
+
+[node name="ColumnaBloques13" parent="Bordes/Este" index="12"]
+visible = false
+
+[node name="ColumnaBloques14" parent="Bordes/Este" index="13"]
+visible = false
+
+[node name="ColumnaBloques15" parent="Bordes/Este" index="14"]
+visible = false
+
+[node name="ColumnaBloques16" parent="Bordes/Este" index="15"]
+visible = false
+
+[node name="ColumnaBloques17" parent="Bordes/Este" index="16"]
+visible = false
+
+[node name="ColumnaBloques18" parent="Bordes/Este" index="17"]
+visible = false
+
+[node name="ColumnaBloques19" parent="Bordes/Este" index="18"]
+visible = false
+
+[node name="ColumnaBloques20" parent="Bordes/Este" index="19"]
+visible = false
+
+[node name="ColumnaBloques21" parent="Bordes/Este" index="20"]
+visible = false
+
+[node name="ColumnaBloques22" parent="Bordes/Este" index="21"]
+visible = false
+
+[node name="ColumnaBloques23" parent="Bordes/Este" index="22"]
+visible = false
+
+[node name="ColumnaBloques24" parent="Bordes/Este" index="23"]
+visible = false
+
+[node name="ColumnaBloques25" parent="Bordes/Este" index="24"]
+visible = false
+
+[node name="ColumnaBloques51" parent="Bordes/Este" index="25"]
+visible = false
+
+[node name="ColumnaBloques26" parent="Bordes/Este" index="26"]
+visible = false
+
+[node name="ColumnaBloques27" parent="Bordes/Este" index="27"]
+visible = false
+
+[node name="ColumnaBloques28" parent="Bordes/Este" index="28"]
+visible = false
+
+[node name="ColumnaBloques29" parent="Bordes/Este" index="29"]
+visible = false
+
+[node name="ColumnaBloques30" parent="Bordes/Este" index="30"]
+visible = false
+
+[node name="ColumnaBloques31" parent="Bordes/Este" index="31"]
+visible = false
+
+[node name="ColumnaBloques32" parent="Bordes/Este" index="32"]
+visible = false
+
+[node name="ColumnaBloques33" parent="Bordes/Este" index="33"]
+visible = false
+
+[node name="ColumnaBloques34" parent="Bordes/Este" index="34"]
+visible = false
+
+[node name="ColumnaBloques35" parent="Bordes/Este" index="35"]
+visible = false
+
+[node name="ColumnaBloques36" parent="Bordes/Este" index="36"]
+visible = false
+
+[node name="ColumnaBloques37" parent="Bordes/Este" index="37"]
+visible = false
+
+[node name="ColumnaBloques38" parent="Bordes/Este" index="38"]
+visible = false
+
+[node name="ColumnaBloques39" parent="Bordes/Este" index="39"]
+visible = false
+
+[node name="ColumnaBloques40" parent="Bordes/Este" index="40"]
+visible = false
+
+[node name="Plataformas" parent="." index="4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9 )
 
 [node name="BloqueGrande" parent="Plataformas" index="0" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.20481, 2.89607, 13.1586 )
@@ -45,52 +432,80 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16185, 3.23515, 16.1369 )
 [node name="BloqueLargo" parent="Plataformas" index="7" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.07763, 0, 3.63722 )
 
+[node name="Player" parent="." index="5"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -7 )
+
+[node name="BloqueTierra" parent="ContenedorNumNivel" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00118, 4.80916, 10.009 )
+
 [node name="BloqueTierra2" parent="ContenedorNumNivel" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00117803, 4.80916, 10.006 )
 visible = false
-collision_layer = 0
 collision_mask = 0
 
 [node name="BloqueTierra3" parent="ContenedorNumNivel" index="2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.998822, 4.80916, 10.006 )
 visible = false
-collision_layer = 0
 collision_mask = 0
 
+[node name="BloqueTierra4" parent="ContenedorNumNivel" index="3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00118, 5.80916, 10.009 )
+
 [node name="BloqueTierra5" parent="ContenedorNumNivel" index="4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00117803, 5.80916, 10.006 )
 visible = false
-collision_layer = 0
 collision_mask = 0
 
 [node name="BloqueTierra6" parent="ContenedorNumNivel" index="5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.998822, 5.80916, 10.006 )
 visible = false
-collision_layer = 0
 collision_mask = 0
 
+[node name="BloqueTierra7" parent="ContenedorNumNivel" index="6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00118, 6.80916, 10.009 )
+
 [node name="BloqueTierra8" parent="ContenedorNumNivel" index="7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00117803, 6.80916, 10.006 )
 visible = false
 
 [node name="BloqueTierra9" parent="ContenedorNumNivel" index="8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.998822, 6.80916, 10.006 )
 visible = false
+
+[node name="BloqueTierra10" parent="ContenedorNumNivel" index="9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00118, 7.80916, 10.009 )
 
 [node name="BloqueTierra11" parent="ContenedorNumNivel" index="10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00117803, 7.80916, 10.006 )
 visible = false
 
+[node name="BloqueTierra12" parent="ContenedorNumNivel" index="11"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.998822, 7.80916, 10.006 )
+
+[node name="BloqueTierra13" parent="ContenedorNumNivel" index="12"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00118, 8.80916, 10.009 )
+
+[node name="BloqueTierra15" parent="ContenedorNumNivel" index="13"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00117803, 8.80916, 10.006 )
+
 [node name="BloqueTierra16" parent="ContenedorNumNivel" index="14"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.998822, 8.80916, 10.006 )
 visible = false
 
 [node name="CaminoPath" parent="ContenedorObjetos" index="0" instance=ExtResource( 2 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.81891, 4.64794, 8.656 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.81891, 4.64794, 0.0879445 )
 
 [node name="Sierra" parent="ContenedorObjetos" index="1" instance=ExtResource( 4 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.46601, 2.51608, 8.10998 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.46601, 2.51608, -0.458076 )
 
 [node name="Sierra2" parent="ContenedorObjetos" index="2" instance=ExtResource( 4 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.46601, 2.51608, 9.01712 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.46601, 2.51608, 0.449065 )
 
 [node name="Sierra3" parent="ContenedorObjetos" index="3" instance=ExtResource( 4 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.46601, 2.51608, 9.93931 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.46601, 2.51608, 1.37125 )
 
 [node name="Portal" parent="." index="9"]
-transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 1.18173, 4.33321, 16.236 )
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 1.18173, 4.33321, 7.236 )
 
 [node name="Ambiente" parent="." index="10"]
 stream = ExtResource( 3 )
