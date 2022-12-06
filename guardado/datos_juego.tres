@@ -5,8 +5,8 @@
 [resource]
 script = ExtResource( 1 )
 vidas = 1
-moneda_oro = 0
-nivel_actual = "res://juego/Niveles/Nivel_2.tscn"
-num_nivel_actual = 2
-nivel_proximo = "res://juego/Niveles/Nivel_3.tscn"
+moneda_oro = 22
+nivel_actual = "res://juego/Niveles/Nivel_Final.tscn"
+num_nivel_actual = 4
+nivel_proximo = "res://juego/Menus/MenuInicio.tscn"
 juego_guardado = true

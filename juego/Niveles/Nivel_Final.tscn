@@ -1,38 +1,321 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://juego/Niveles/NivelBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://juego/Bloques/BloqueGrande.tscn" type="PackedScene" id=2]
+[ext_resource path="res://juego/Objetos/danio/Sierra.tscn" type="PackedScene" id=3]
+[ext_resource path="res://juego/Objetos/danio/CaminoPathRecto.tscn" type="PackedScene" id=4]
+[ext_resource path="res://juego/Items/MonedaDorada.tscn" type="PackedScene" id=5]
 
 [sub_resource type="PlaneMesh" id=1]
-size = Vector2( 50, 50 )
+size = Vector2( 500, 500 )
 
 [sub_resource type="SpatialMaterial" id=2]
-albedo_color = Color( 0.266667, 0.329412, 0.0235294, 1 )
+albedo_color = Color( 0.207843, 0.984314, 0.964706, 1 )
 
 [node name="Nivel_Final" instance=ExtResource( 1 )]
 numero_nivel = 4
 proximo_nivel = "res://juego/Menus/MenuInicio.tscn"
 
+[node name="Suelo" parent="." index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7, 0 )
+
 [node name="MeshInstance" parent="Suelo" index="0"]
 mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
 
+[node name="Bordes" parent="." index="3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0 )
+
+[node name="BloqueGrande" parent="Plataformas" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -1, -20 )
+
+[node name="BloqueGrande32" parent="Plataformas" index="1" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -20 )
+
+[node name="BloqueGrande2" parent="Plataformas" index="2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -1, -20 )
+
+[node name="BloqueGrande3" parent="Plataformas" index="3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -1, -16 )
+
+[node name="BloqueGrande4" parent="Plataformas" index="4" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -1, -16 )
+
+[node name="BloqueGrande5" parent="Plataformas" index="5" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -1, -12 )
+
+[node name="BloqueGrande6" parent="Plataformas" index="6" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -1, -8 )
+
+[node name="BloqueGrande7" parent="Plataformas" index="7" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -1, -8 )
+
+[node name="BloqueGrande8" parent="Plataformas" index="8" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -1, -8 )
+
+[node name="BloqueGrande9" parent="Plataformas" index="9" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1, -8 )
+
+[node name="BloqueGrande10" parent="Plataformas" index="10" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1, -8 )
+
+[node name="BloqueGrande12" parent="Plataformas" index="11" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1, -8 )
+
+[node name="BloqueGrande13" parent="Plataformas" index="12" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1, -4 )
+
+[node name="BloqueGrande14" parent="Plataformas" index="13" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -1, -4 )
+
+[node name="BloqueGrande15" parent="Plataformas" index="14" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, -1, -4 )
+
+[node name="BloqueGrande16" parent="Plataformas" index="15" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, -1, 0 )
+
+[node name="BloqueGrande17" parent="Plataformas" index="16" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, -1, 4 )
+
+[node name="BloqueGrande18" parent="Plataformas" index="17" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -1, 4 )
+
+[node name="BloqueGrande19" parent="Plataformas" index="18" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1, 4 )
+
+[node name="BloqueGrande20" parent="Plataformas" index="19" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1, 4 )
+
+[node name="BloqueGrande33" parent="Plataformas" index="20" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1, 8 )
+
+[node name="BloqueGrande34" parent="Plataformas" index="21" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1, 12 )
+
+[node name="BloqueGrande21" parent="Plataformas" index="22" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1, 4 )
+
+[node name="BloqueGrande22" parent="Plataformas" index="23" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -1, 4 )
+
+[node name="BloqueGrande23" parent="Plataformas" index="24" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -1, 4 )
+
+[node name="BloqueGrande24" parent="Plataformas" index="25" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -1, 4 )
+
+[node name="BloqueGrande25" parent="Plataformas" index="26" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -1, 8 )
+
+[node name="BloqueGrande26" parent="Plataformas" index="27" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -1, 12 )
+
+[node name="BloqueGrande27" parent="Plataformas" index="28" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -1, 16 )
+
+[node name="BloqueGrande28" parent="Plataformas" index="29" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -1, 16 )
+
+[node name="BloqueGrande29" parent="Plataformas" index="30" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -1, 16 )
+
+[node name="BloqueGrande30" parent="Plataformas" index="31" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1, 16 )
+
+[node name="BloqueGrande31" parent="Plataformas" index="32" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1, 16 )
+
+[node name="BloqueGrande11" parent="Plataformas" index="33" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1, -12 )
+
+[node name="Player" parent="." index="5"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -20 )
+
+[node name="MonedaDorada" parent="ContenedorMonedas" index="0" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.5, -12 )
+
+[node name="MonedaDorada2" parent="ContenedorMonedas" index="1" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.5, -12 )
+
+[node name="MonedaDorada3" parent="ContenedorMonedas" index="2" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0.5, -8 )
+
+[node name="MonedaDorada4" parent="ContenedorMonedas" index="3" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0.5, -4 )
+
+[node name="MonedaDorada5" parent="ContenedorMonedas" index="4" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, 4 )
+
+[node name="MonedaDorada6" parent="ContenedorMonedas" index="5" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0.5, 4 )
+
+[node name="MonedaDorada7" parent="ContenedorMonedas" index="6" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0.5, 4 )
+
+[node name="MonedaDorada8" parent="ContenedorMonedas" index="7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0.5, 4 )
+
+[node name="MonedaDorada9" parent="ContenedorMonedas" index="8" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0.5, 8 )
+
+[node name="MonedaDorada10" parent="ContenedorMonedas" index="9" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0.5, 8 )
+
+[node name="MonedaDorada11" parent="ContenedorMonedas" index="10" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0.5, 16 )
+
+[node name="MonedaDorada12" parent="ContenedorMonedas" index="11" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0.5, 16 )
+
+[node name="MonedaDorada13" parent="ContenedorMonedas" index="12" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0.5, 16 )
+
+[node name="MonedaDorada14" parent="ContenedorMonedas" index="13" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0.5, 16 )
+
+[node name="BloqueTierra" parent="ContenedorNumNivel" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00118, 2.80916, 25.009 )
+
 [node name="BloqueTierra2" parent="ContenedorNumNivel" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00117803, 2.80916, 25.006 )
 visible = false
 
 [node name="BloqueTierra3" parent="ContenedorNumNivel" index="2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.998822, 2.80916, 25.006 )
 visible = false
 
+[node name="BloqueTierra4" parent="ContenedorNumNivel" index="3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00118, 3.80916, 25.009 )
+
 [node name="BloqueTierra5" parent="ContenedorNumNivel" index="4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00117803, 3.80916, 25.006 )
 visible = false
 
 [node name="BloqueTierra6" parent="ContenedorNumNivel" index="5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.998822, 3.80916, 25.006 )
 visible = false
+
+[node name="BloqueTierra7" parent="ContenedorNumNivel" index="6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00118, 4.80916, 25.009 )
+
+[node name="BloqueTierra8" parent="ContenedorNumNivel" index="7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00117803, 4.80916, 25.006 )
+
+[node name="BloqueTierra9" parent="ContenedorNumNivel" index="8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.998822, 4.80916, 25.006 )
+
+[node name="BloqueTierra10" parent="ContenedorNumNivel" index="9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00118, 5.80916, 25.009 )
 
 [node name="BloqueTierra11" parent="ContenedorNumNivel" index="10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00117803, 5.80916, 25.006 )
 visible = false
+
+[node name="BloqueTierra12" parent="ContenedorNumNivel" index="11"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.998822, 5.80916, 25.006 )
+
+[node name="BloqueTierra13" parent="ContenedorNumNivel" index="12"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00118, 6.80916, 25.009 )
 
 [node name="BloqueTierra15" parent="ContenedorNumNivel" index="13"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00117803, 6.80916, 25.006 )
 visible = false
 
+[node name="BloqueTierra16" parent="ContenedorNumNivel" index="14"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.998822, 6.80916, 25.006 )
+
+[node name="Sierra" parent="ContenedorObjetos" index="0" instance=ExtResource( 3 )]
+transform = Transform( 60, 0, 0, 0, -2.62268e-06, -10, 0, 60, -4.37114e-07, 0, -5, 0 )
+
+[node name="CollisionShape" parent="ContenedorObjetos/Sierra" index="0"]
+transform = Transform( 1.5, 0, 0, 0, -4.37114e-08, -1.5, 0, 1, -6.55671e-08, 0, 0, 0 )
+
+[node name="saw" parent="ContenedorObjetos/Sierra/tmpParent" index="0"]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="AudioStreamPlayer3D" parent="ContenedorObjetos/Sierra" index="3"]
+unit_db = -35.913
+
+[node name="CaminoPath" parent="ContenedorObjetos" index="1" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1, -18 )
+
+[node name="CaminoPath2" parent="ContenedorObjetos" index="2" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 1, -10 )
+
+[node name="CaminoPath3" parent="ContenedorObjetos" index="3" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -10 )
+
+[node name="CaminoPath21" parent="ContenedorObjetos" index="4" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1, 2 )
+
+[node name="CaminoPath4" parent="ContenedorObjetos" index="5" instance=ExtResource( 4 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9, 1, -6 )
+
+[node name="CaminoPath20" parent="ContenedorObjetos" index="6" instance=ExtResource( 4 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -16, 1, -2 )
+
+[node name="CaminoPath5" parent="ContenedorObjetos" index="7" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 1, 6 )
+
+[node name="CaminoPath22" parent="ContenedorObjetos" index="8" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 1, 14 )
+
+[node name="CaminoPath6" parent="ContenedorObjetos" index="9" instance=ExtResource( 4 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 12, 1, 10 )
+
+[node name="CaminoPath7" parent="ContenedorObjetos" index="10" instance=ExtResource( 4 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -4, 1, 6 )
+
+[node name="CaminoPath8" parent="ContenedorObjetos" index="11" instance=ExtResource( 4 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 4, 1, 6 )
+
+[node name="CaminoPath13" parent="ContenedorObjetos" index="12" instance=ExtResource( 4 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 12, 1, 6 )
+
+[node name="CaminoPath23" parent="ContenedorObjetos" index="13" instance=ExtResource( 4 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 12, 1, 18 )
+
+[node name="CaminoPath24" parent="ContenedorObjetos" index="14" instance=ExtResource( 4 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 4, 1, 18 )
+
+[node name="CaminoPath14" parent="ContenedorObjetos" index="15" instance=ExtResource( 4 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 12, 1, -6 )
+
+[node name="CaminoPath15" parent="ContenedorObjetos" index="16" instance=ExtResource( 4 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 4, 1, -6 )
+
+[node name="CaminoPath16" parent="ContenedorObjetos" index="17" instance=ExtResource( 4 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -4, 1, -6 )
+
+[node name="CaminoPath9" parent="ContenedorObjetos" index="18" instance=ExtResource( 4 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -12, 1, 6 )
+
+[node name="CaminoPath10" parent="ContenedorObjetos" index="19" instance=ExtResource( 4 )]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -8, 1, 2 )
+
+[node name="CaminoPath19" parent="ContenedorObjetos" index="20" instance=ExtResource( 4 )]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -12, 1, -6 )
+
+[node name="CaminoPath11" parent="ContenedorObjetos" index="21" instance=ExtResource( 4 )]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -1.90735e-06, 1, 2 )
+
+[node name="CaminoPath17" parent="ContenedorObjetos" index="22" instance=ExtResource( 4 )]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -1.90735e-06, 1, -10 )
+
+[node name="CaminoPath18" parent="ContenedorObjetos" index="23" instance=ExtResource( 4 )]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 8, 1, -10 )
+
+[node name="CaminoPath12" parent="ContenedorObjetos" index="24" instance=ExtResource( 4 )]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 8, 1, 2 )
+
+[node name="CaminoPath25" parent="ContenedorObjetos" index="25" instance=ExtResource( 4 )]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 8, 1, 14 )
+
+[node name="CaminoPath26" parent="ContenedorObjetos" index="26" instance=ExtResource( 4 )]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -1.90735e-06, 1, 14 )
+
 [node name="Portal" parent="." index="9"]
+transform = Transform( 0.75, 0, -1.29904, 0, 1.5, 0, 1.29904, 0, 0.75, -2.5, 0, 16.5 )
 proximo_nivel = "res://juego/Menus/MenuFinalCreditos.tscn"
+
+[editable path="ContenedorObjetos/Sierra"]

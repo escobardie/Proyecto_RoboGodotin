@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://juego/Niveles/NivelBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/Objetos/danio/Sierra.tscn" type="PackedScene" id=2]
 [ext_resource path="res://juego/Objetos/danio/CaminoPathRecto.tscn" type="PackedScene" id=3]
+[ext_resource path="res://juego/Items/MonedaDorada.tscn" type="PackedScene" id=4]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 50, 50 )
@@ -26,6 +27,48 @@ transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18, 0, 
 
 [node name="Player" parent="." index="5"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -20 )
+
+[node name="MonedaDorada" parent="ContenedorMonedas" index="0" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -14.5 )
+
+[node name="MonedaDorada2" parent="ContenedorMonedas" index="1" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -15.5 )
+
+[node name="MonedaDorada3" parent="ContenedorMonedas" index="2" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -16.5 )
+
+[node name="MonedaDorada4" parent="ContenedorMonedas" index="3" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -5.5 )
+
+[node name="MonedaDorada5" parent="ContenedorMonedas" index="4" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.5, -2.5 )
+
+[node name="MonedaDorada6" parent="ContenedorMonedas" index="5" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.5, -2.5 )
+
+[node name="MonedaDorada7" parent="ContenedorMonedas" index="6" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -2.5 )
+
+[node name="MonedaDorada8" parent="ContenedorMonedas" index="7" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 5.5 )
+
+[node name="MonedaDorada11" parent="ContenedorMonedas" index="8" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 8.5 )
+
+[node name="MonedaDorada12" parent="ContenedorMonedas" index="9" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 11.5 )
+
+[node name="MonedaDorada13" parent="ContenedorMonedas" index="10" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 14.5 )
+
+[node name="MonedaDorada14" parent="ContenedorMonedas" index="11" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 18 )
+
+[node name="MonedaDorada9" parent="ContenedorMonedas" index="12" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.5, 8.5 )
+
+[node name="MonedaDorada10" parent="ContenedorMonedas" index="13" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.5, 8.5 )
 
 [node name="BloqueTierra4" parent="ContenedorNumNivel" index="3"]
 visible = false
@@ -69,23 +112,26 @@ transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 12, 2, 12 )
 [node name="CaminoPath7" parent="ContenedorObjetos" index="7" instance=ExtResource( 3 )]
 transform = Transform( -5, 0, -4.37114e-07, 0, 5, 0, 4.37114e-07, 0, -5, -10.5, 2, -4 )
 
-[node name="CaminoPath3" parent="ContenedorObjetos" index="8" instance=ExtResource( 3 )]
-transform = Transform( -4.33013, 0, 2.5, 0, 5, 0, -2.5, 0, -4.33013, -12.5, 2, 5.5 )
+[node name="CaminoPath9" parent="ContenedorObjetos" index="8" instance=ExtResource( 3 )]
+transform = Transform( 4.82963, 0, 1.2941, 0, 5, 0, -1.2941, 0, 4.82963, 11, 2, -7 )
 
-[node name="CaminoPath5" parent="ContenedorObjetos" index="9" instance=ExtResource( 3 )]
+[node name="CaminoPath3" parent="ContenedorObjetos" index="9" instance=ExtResource( 3 )]
+transform = Transform( -4.82963, 0, 1.29409, 0, 5, 0, -1.29409, 0, -4.82963, -12.5, 2, 1.5 )
+
+[node name="CaminoPath5" parent="ContenedorObjetos" index="10" instance=ExtResource( 3 )]
 transform = Transform( -4.33013, 0, 2.5, 0, 5, 0, -2.5, 0, -4.33013, -12.5, 2, -18.5 )
 
-[node name="CaminoPath4" parent="ContenedorObjetos" index="10" instance=ExtResource( 3 )]
+[node name="CaminoPath4" parent="ContenedorObjetos" index="11" instance=ExtResource( 3 )]
 transform = Transform( -5, 0, -4.37114e-07, 0, 5, 0, 4.37114e-07, 0, -5, -11, 2, 19 )
 
-[node name="CaminoPath8" parent="ContenedorObjetos" index="11" instance=ExtResource( 3 )]
+[node name="CaminoPath8" parent="ContenedorObjetos" index="12" instance=ExtResource( 3 )]
 transform = Transform( 5, 0, 8.74228e-07, 0, 5, 0, -8.74228e-07, 0, 5, 11, 2, 17.5 )
 
-[node name="CaminoPath2" parent="ContenedorObjetos" index="12" instance=ExtResource( 3 )]
-transform = Transform( 4.33013, 0, 2.5, 0, 5, 0, -2.5, 0, 4.33013, 12, 2, -14.5 )
+[node name="CaminoPath2" parent="ContenedorObjetos" index="13" instance=ExtResource( 3 )]
+transform = Transform( 4.82963, 0, 1.29409, 0, 5, 0, -1.29409, 0, 4.82963, 12, 2, -19 )
 
-[node name="CaminoPath6" parent="ContenedorObjetos" index="13" instance=ExtResource( 3 )]
-transform = Transform( 4.33013, 0, 2.5, 0, 5, 0, -2.5, 0, 4.33013, 12, 2, 1.5 )
+[node name="CaminoPath6" parent="ContenedorObjetos" index="14" instance=ExtResource( 3 )]
+transform = Transform( 4.82963, 0, 1.29409, 0, 5, 0, -1.29409, 0, 4.82963, 12, 2, 1.5 )
 
 [node name="Portal" parent="." index="9"]
 transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 20.5 )

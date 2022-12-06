@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://juego/Niveles/NivelBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/Objetos/danio/CaminoPathRecto.tscn" type="PackedScene" id=2]
 [ext_resource path="res://juego/Niveles/Ambiente/ambiente de bosque por la mañana.mp3" type="AudioStream" id=3]
 [ext_resource path="res://juego/Objetos/danio/Sierra.tscn" type="PackedScene" id=4]
 [ext_resource path="res://juego/Bloques/BloqueGrande.tscn" type="PackedScene" id=5]
+[ext_resource path="res://juego/Items/MonedaDorada.tscn" type="PackedScene" id=6]
 [ext_resource path="res://juego/Bloques/BloqueLargo.tscn" type="PackedScene" id=7]
 
 [sub_resource type="SpatialMaterial" id=1]
@@ -434,6 +435,18 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.07763, 0, 3.63722 )
 
 [node name="Player" parent="." index="5"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -7 )
+
+[node name="MonedaDorada" parent="ContenedorMonedas" index="0" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.05079, 1.5, -5.5 )
+
+[node name="MonedaDorada2" parent="ContenedorMonedas" index="1" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.23334, 2, -3 )
+
+[node name="MonedaDorada3" parent="ContenedorMonedas" index="2" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.64105, 3, 0.556693 )
+
+[node name="MonedaDorada4" parent="ContenedorMonedas" index="3" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.22165, 4.5, 4.10075 )
 
 [node name="BloqueTierra" parent="ContenedorNumNivel" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00118, 4.80916, 10.009 )

@@ -8,6 +8,6 @@ pantalla_completa = false
 pantalla_resolucion = Vector2( 960, 640 )
 volumen_buses = {
 "master": 0.375,
-"musica": -9.6729,
-"sfx": -5.6729
+"musica": -23.6729,
+"sfx": -29.3165
 }
